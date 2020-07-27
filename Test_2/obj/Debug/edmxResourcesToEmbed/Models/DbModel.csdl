@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="DbModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ConnectionModelSet" EntityType="DbModel.ConnectionModel" />
+    <EntitySet Name="TempUserSet" EntityType="DbModel.TempUser" />
+    <AssociationSet Name="TempUserConnectionModel" Association="DbModel.TempUserConnectionModel">
+      <End Role="TempUser" EntitySet="TempUserSet" />
+      <End Role="ConnectionModel" EntitySet="ConnectionModelSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ConnectionModel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="Ip" Nullable="false" Type="String" />
+    <Property Name="Port" Nullable="false" Type="String" />
+    <Property Name="Login" Nullable="false" Type="String" />
+    <Property Name="Key" Nullable="false" Type="String" />
+    <Property Name="Key_root" Nullable="false" Type="String" />
+    <NavigationProperty Name="TempUser" Relationship="DbModel.TempUserConnectionModel" FromRole="ConnectionModel" ToRole="TempUser" />
+    <Property Name="TempUserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TempUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" Nullable="false" />
+    <NavigationProperty Name="ConnectionModel" Relationship="DbModel.TempUserConnectionModel" FromRole="TempUser" ToRole="ConnectionModel" />
+  </EntityType>
+  <Association Name="TempUserConnectionModel">
+    <End Type="DbModel.TempUser" Role="TempUser" Multiplicity="1" />
+    <End Type="DbModel.ConnectionModel" Role="ConnectionModel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TempUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ConnectionModel">
+        <PropertyRef Name="TempUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

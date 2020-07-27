@@ -1,0 +1,814 @@
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Content\Site.css
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\DesignFactory.WebMatrix.Executer.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Test_2.dll.config
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Test_2.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Test_2.pdb
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\csc.exe
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\csc.exe.config
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\csc.rsp
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\csi.exe
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\csi.exe.config
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\csi.rsp
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.AppContext.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Collections.Immutable.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Console.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Globalization.Calendars.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.IO.Compression.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.IO.FileSystem.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Net.Http.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Net.Sockets.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Reflection.Metadata.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.ValueTuple.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Xml.XPath.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\vbc.exe
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\vbc.exe.config
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\vbc.rsp
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\VBCSCompiler.exe
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\roslyn\VBCSCompiler.exe.config
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Afx.Sockets.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Afx.Tcp.Protocols.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Antlr3.Runtime.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\BCrypt.Net-Next.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Dapper.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\DesignFactory.WebMatrix.ExecuterFactory.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\DesignFactory.WebMatrix.IExecuter.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\EntityFramework.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\EntityFramework.SqlServer.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\EntityFramework.SqlServerCompact.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Data.Edm.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Data.OData.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.Google.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Web.Infrastructure.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Win32.Primitives.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\MoreLinq.Portable.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Newtonsoft.Json.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Owin.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\protobuf-net.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Renci.SshNet.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.AppContext.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Console.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Data.SqlServerCe.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Globalization.Calendars.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.IO.Compression.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.IO.FileSystem.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.IO.FileSystem.Primitives.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Net.FtpClient.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Net.Http.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Net.Http.Formatting.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Net.Sockets.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Security.Cryptography.Algorithms.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Security.Cryptography.Encoding.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Security.Cryptography.Primitives.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Shim.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Spatial.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Helpers.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Http.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Http.OData.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Http.WebHost.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Mvc.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Optimization.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Razor.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.WebPages.Deployment.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.WebPages.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.WebPages.Razor.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Xml.ReaderWriter.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\WebGrease.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\ZipidiZip.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Afx.Sockets.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Afx.Tcp.Protocols.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\BCrypt.Net-Next.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Dapper.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\EntityFramework.SqlServerCompact.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Data.Edm.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Data.OData.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\MoreLinq.Portable.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Newtonsoft.Json.pdb
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Newtonsoft.Json.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\protobuf-net.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Renci.SshNet.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Net.FtpClient.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Net.Http.Formatting.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Spatial.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Helpers.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Http.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Http.OData.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Http.WebHost.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Mvc.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Razor.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.WebPages.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.WebPages.Deployment.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.WebPages.Razor.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\System.Web.Optimization.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Antlr3.Runtime.pdb
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\EntityFramework.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\EntityFramework.SqlServer.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.Google.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\de\Microsoft.Data.OData.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\es\Microsoft.Data.OData.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\it\Microsoft.Data.OData.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\de\System.Spatial.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\es\System.Spatial.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\fr\System.Spatial.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\it\System.Spatial.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\ja\System.Spatial.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\ko\System.Spatial.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\ru\System.Spatial.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\zh-Hans\System.Spatial.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\zh-Hant\System.Spatial.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\pl\System.Web.Helpers.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\pl\System.Web.Mvc.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\pl\System.Web.Razor.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\pl\System.Web.WebPages.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\pl\System.Web.WebPages.Deployment.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\pl\System.Web.WebPages.Razor.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\pl\System.Web.Optimization.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\obj\Debug\AdministracjaIZarzadzanieSystememLINUX.csprojAssemblyReference.cache
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\obj\Debug\AdministracjaIZarzadzanieSystememLINUX.csproj.CoreCompileInputs.cache
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\obj\Debug\AdministracjaIZarzadzanieSystememLINUX.csproj.CopyComplete
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\obj\Debug\Test_2.dll
+C:\Inzynierka\23grudnia\test_2\Test_2\Test_2\obj\Debug\Test_2.pdb
+G:\PracaDyplomowa\Test_2\Test_2\bin\Content\Site.css
+G:\PracaDyplomowa\Test_2\Test_2\bin\DesignFactory.WebMatrix.Executer.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Test_2.dll.config
+G:\PracaDyplomowa\Test_2\Test_2\bin\Test_2.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Test_2.pdb
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csc.exe
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csc.exe.config
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csc.rsp
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csi.exe
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csi.exe.config
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csi.rsp
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.Managed.Core.targets
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.AppContext.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Collections.Immutable.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Console.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Globalization.Calendars.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.Compression.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.FileSystem.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Net.Http.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Net.Sockets.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Reflection.Metadata.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.ValueTuple.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.XmlDocument.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.XPath.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\vbc.exe
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\vbc.exe.config
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\vbc.rsp
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\VBCSCompiler.exe
+G:\PracaDyplomowa\Test_2\Test_2\bin\roslyn\VBCSCompiler.exe.config
+G:\PracaDyplomowa\Test_2\Test_2\bin\Afx.Sockets.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Afx.Tcp.Protocols.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Antlr3.Runtime.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\BCrypt.Net-Next.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Dapper.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\DesignFactory.WebMatrix.ExecuterFactory.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\DesignFactory.WebMatrix.IExecuter.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServer.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServerCompact.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Core.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.Edm.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.OData.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Cookies.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Facebook.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Google.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.OAuth.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Twitter.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Web.Infrastructure.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Win32.Primitives.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\MoreLinq.Portable.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Newtonsoft.Json.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Owin.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\protobuf-net.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Renci.SshNet.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.AppContext.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Console.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Data.SqlServerCe.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Diagnostics.DiagnosticSource.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Globalization.Calendars.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.IO.Compression.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.IO.FileSystem.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.IO.FileSystem.Primitives.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Net.FtpClient.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Http.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Http.Formatting.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Sockets.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.Algorithms.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.Encoding.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.Primitives.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.X509Certificates.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Shim.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Spatial.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Helpers.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.OData.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.WebHost.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Mvc.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Optimization.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Razor.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Deployment.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Razor.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Xml.ReaderWriter.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\WebGrease.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\ZipidiZip.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\Afx.Sockets.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Afx.Tcp.Protocols.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\BCrypt.Net-Next.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Dapper.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServerCompact.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.Edm.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.OData.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\MoreLinq.Portable.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Newtonsoft.Json.pdb
+G:\PracaDyplomowa\Test_2\Test_2\bin\Newtonsoft.Json.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\protobuf-net.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Renci.SshNet.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Diagnostics.DiagnosticSource.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Net.FtpClient.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Http.Formatting.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Spatial.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Helpers.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.OData.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.WebHost.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Mvc.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Razor.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Deployment.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Razor.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Optimization.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Antlr3.Runtime.pdb
+G:\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServer.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Core.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Facebook.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Cookies.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Google.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Twitter.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.OAuth.xml
+G:\PracaDyplomowa\Test_2\Test_2\bin\de\Microsoft.Data.Edm.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\es\Microsoft.Data.Edm.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\fr\Microsoft.Data.Edm.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\it\Microsoft.Data.Edm.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\ja\Microsoft.Data.Edm.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\ko\Microsoft.Data.Edm.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\ru\Microsoft.Data.Edm.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\de\Microsoft.Data.OData.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\es\Microsoft.Data.OData.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\fr\Microsoft.Data.OData.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\it\Microsoft.Data.OData.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\ja\Microsoft.Data.OData.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\ko\Microsoft.Data.OData.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\ru\Microsoft.Data.OData.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\de\System.Spatial.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\es\System.Spatial.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\fr\System.Spatial.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\it\System.Spatial.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\ja\System.Spatial.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\ko\System.Spatial.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\ru\System.Spatial.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\zh-Hans\System.Spatial.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\zh-Hant\System.Spatial.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Helpers.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Mvc.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Razor.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.WebPages.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.WebPages.Deployment.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.WebPages.Razor.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Optimization.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.Core.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.Owin.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+G:\PracaDyplomowa\Test_2\Test_2\obj\Debug\AdministracjaIZarzadzanieSystememLINUX.csprojAssemblyReference.cache
+G:\PracaDyplomowa\Test_2\Test_2\obj\Debug\AdministracjaIZarzadzanieSystememLINUX.csproj.CoreCompileInputs.cache
+G:\PracaDyplomowa\Test_2\Test_2\obj\Debug\AdministracjaIZarzadzanieSystememLINUX.csproj.CopyComplete
+G:\PracaDyplomowa\Test_2\Test_2\obj\Debug\Test_2.dll
+G:\PracaDyplomowa\Test_2\Test_2\obj\Debug\Test_2.pdb
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Content\Site.css
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\DesignFactory.WebMatrix.Executer.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Test_2.dll.config
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Test_2.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Test_2.pdb
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csc.exe
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csc.exe.config
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csc.rsp
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csi.exe
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csi.exe.config
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csi.rsp
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.AppContext.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Collections.Immutable.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Console.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Globalization.Calendars.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.Compression.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.FileSystem.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Net.Http.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Net.Sockets.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Reflection.Metadata.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.ValueTuple.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.XPath.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\vbc.exe
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\vbc.exe.config
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\vbc.rsp
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\VBCSCompiler.exe
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\roslyn\VBCSCompiler.exe.config
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Afx.Sockets.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Afx.Tcp.Protocols.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Antlr3.Runtime.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\BCrypt.Net-Next.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Dapper.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\DesignFactory.WebMatrix.ExecuterFactory.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\DesignFactory.WebMatrix.IExecuter.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServer.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServerCompact.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.Edm.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.OData.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Google.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Web.Infrastructure.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Win32.Primitives.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\MoreLinq.Portable.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Newtonsoft.Json.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Owin.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\protobuf-net.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Renci.SshNet.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.AppContext.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Console.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Data.SqlServerCe.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Globalization.Calendars.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.IO.Compression.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.IO.FileSystem.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.IO.FileSystem.Primitives.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Net.FtpClient.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Http.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Http.Formatting.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Sockets.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.Algorithms.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.Encoding.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.Primitives.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.X509Certificates.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Shim.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Spatial.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Helpers.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.OData.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.WebHost.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Mvc.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Optimization.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Razor.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Deployment.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Razor.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Xml.ReaderWriter.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\WebGrease.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\ZipidiZip.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Afx.Sockets.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Afx.Tcp.Protocols.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\BCrypt.Net-Next.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Dapper.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServerCompact.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.Edm.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.OData.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\MoreLinq.Portable.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Newtonsoft.Json.pdb
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Newtonsoft.Json.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\protobuf-net.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Renci.SshNet.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Net.FtpClient.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Http.Formatting.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Spatial.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Helpers.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.OData.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.WebHost.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Mvc.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Razor.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Deployment.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Razor.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Optimization.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Antlr3.Runtime.pdb
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServer.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Google.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\de\Microsoft.Data.Edm.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\es\Microsoft.Data.Edm.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\it\Microsoft.Data.Edm.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\de\Microsoft.Data.OData.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\es\Microsoft.Data.OData.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\fr\Microsoft.Data.OData.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\it\Microsoft.Data.OData.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\ja\Microsoft.Data.OData.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\ko\Microsoft.Data.OData.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\ru\Microsoft.Data.OData.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\de\System.Spatial.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\es\System.Spatial.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\fr\System.Spatial.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\it\System.Spatial.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\ja\System.Spatial.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\ko\System.Spatial.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\ru\System.Spatial.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\zh-Hans\System.Spatial.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\zh-Hant\System.Spatial.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Helpers.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Mvc.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Razor.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.WebPages.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.WebPages.Deployment.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.WebPages.Razor.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Optimization.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.Owin.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\obj\Debug\AdministracjaIZarzadzanieSystememLINUX.csprojAssemblyReference.cache
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\obj\Debug\AdministracjaIZarzadzanieSystememLINUX.csproj.CoreCompileInputs.cache
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\obj\Debug\AdministracjaIZarzadzanieSystememLINUX.csproj.CopyComplete
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\obj\Debug\Test_2.dll
+E:\Dysk USB\PracaDyplomowa\Test_2\Test_2\obj\Debug\Test_2.pdb
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\obj\Debug\AdministracjaIZarzadzanieSystememLINUX.csprojAssemblyReference.cache
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\obj\Debug\Test_2.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\obj\Debug\Test_2.pdb
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Content\Site.css
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\DesignFactory.WebMatrix.Executer.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Test_2.dll.config
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Test_2.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Test_2.pdb
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csc.exe
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csc.exe.config
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csc.rsp
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csi.exe
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csi.exe.config
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\csi.rsp
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.Managed.Core.targets
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.AppContext.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Collections.Immutable.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Console.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Globalization.Calendars.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.Compression.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.FileSystem.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Net.Http.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Net.Sockets.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Reflection.Metadata.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.ValueTuple.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.XmlDocument.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.XPath.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\vbc.exe
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\vbc.exe.config
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\vbc.rsp
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\VBCSCompiler.exe
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\roslyn\VBCSCompiler.exe.config
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Afx.Sockets.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Afx.Tcp.Protocols.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Antlr3.Runtime.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\BCrypt.Net-Next.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Dapper.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\DesignFactory.WebMatrix.ExecuterFactory.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\DesignFactory.WebMatrix.IExecuter.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServer.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServerCompact.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Core.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.Edm.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.OData.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Cookies.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Facebook.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Google.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.OAuth.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Twitter.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Web.Infrastructure.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Win32.Primitives.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\MoreLinq.Portable.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Newtonsoft.Json.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Owin.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\protobuf-net.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Renci.SshNet.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.AppContext.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Console.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Data.SqlServerCe.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Diagnostics.DiagnosticSource.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Globalization.Calendars.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.IO.FileSystem.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.IO.FileSystem.Primitives.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Net.FtpClient.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Http.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Http.Formatting.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Sockets.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.Algorithms.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.Encoding.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.Primitives.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Security.Cryptography.X509Certificates.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Shim.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Spatial.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Helpers.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.OData.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.WebHost.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Mvc.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Optimization.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Razor.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Deployment.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Razor.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Xml.ReaderWriter.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\WebGrease.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\ZipidiZip.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Afx.Sockets.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Afx.Tcp.Protocols.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\BCrypt.Net-Next.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Dapper.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServerCompact.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.Edm.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Data.OData.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\MoreLinq.Portable.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Newtonsoft.Json.pdb
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Newtonsoft.Json.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\protobuf-net.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Renci.SshNet.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Diagnostics.DiagnosticSource.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Net.FtpClient.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Net.Http.Formatting.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Spatial.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Helpers.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.OData.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Http.WebHost.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Mvc.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Razor.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Deployment.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.WebPages.Razor.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\System.Web.Optimization.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Antlr3.Runtime.pdb
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\EntityFramework.SqlServer.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Core.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Facebook.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Cookies.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Google.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.Twitter.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\Microsoft.Owin.Security.OAuth.xml
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\de\Microsoft.Data.Edm.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\es\Microsoft.Data.Edm.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\it\Microsoft.Data.Edm.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\de\Microsoft.Data.OData.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\es\Microsoft.Data.OData.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\fr\Microsoft.Data.OData.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\it\Microsoft.Data.OData.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\ja\Microsoft.Data.OData.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\ko\Microsoft.Data.OData.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\ru\Microsoft.Data.OData.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\de\System.Spatial.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\es\System.Spatial.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\fr\System.Spatial.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\it\System.Spatial.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\ja\System.Spatial.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\ko\System.Spatial.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\ru\System.Spatial.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\zh-Hans\System.Spatial.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\zh-Hant\System.Spatial.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Helpers.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Mvc.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Razor.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.WebPages.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.WebPages.Deployment.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.WebPages.Razor.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\pl\System.Web.Optimization.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.Core.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\bin\pl\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\PracaInzynierska\PracaDyplomowa\Test_2\Test_2\obj\Debug\AdministracjaIZarzadzanieSystememLINUX.csproj.CopyComplete

@@ -1,0 +1,231 @@
+﻿@model IEnumerable<Test_2.Models.ConfigUser_personal>
+@using Renci.SshNet;
+@{
+    ViewBag.Title = "Index";
+    int a = 0;
+
+}
+
+@RenderPage("~/Views/Komunikat.cshtml")
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+@foreach (var item in Model)
+{
+    <script>
+            $(document).ready(function () {
+                $(".id@{@a}").slideUp();
+            });
+
+            $(document).ready(function () {
+                $("#Oc@{@a}").click(function () {
+                        $(".id@{@a}").slideDown();
+                        b = false;
+                    });
+                });
+
+
+    </script>
+    a++;
+}
+
+    <div>
+
+        <div class="rotate_on">
+            <img class="image_rotate" src="~/css/rotating-phone.png" name="rotate" />
+
+        </div>
+
+
+        <div class="rotate_off">
+            <div style="text-align: center">
+                <div class="textyDiv">
+                    <texty>
+                        DOSTĘPNI UŻYTKOWNICY
+                    </texty>
+                    <div />
+
+                    <br />
+                    <form action="/ConfigAccount/Create" method="post">
+                        Nazwa: <input style="font-size:11px;" name="Nazwa_użytkownika" type="text" value="" />
+                        <input style="background-color:#1727a9; color:white; font-size:11px; width :300px;" type="submit" value="STWÓRZ NOWY PROFIL UŻYTKOWNIKA " />
+                    </form>
+                    <table class="connectionProfileList" style="margin:auto; margin-top:20px; color:#ffffff; max-width:700px;">
+                        <thead>
+                            <tr>
+                                <th class="tablet_off">Nr</th>
+                                <th>Nazwa użytkownika</th>
+                                <th>Blokada konta</th>
+                                <th>Haslo</th>
+                                <th>UID</th>
+                                <th>GID</th>
+                                <th class="tablet_off">Komentarz</th>
+                                <th>Katalog domowy</th>
+                                <th class="tablet_off">Polecenie logowania</th>
+                                <th>...</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @{a = -1; }
+                            @foreach (var item in Model)
+                            {
+                                a++;
+                                <tr>
+                                    <td class="tablet_off">
+                                        @a
+                                    </td>
+
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nazwa_użytkownika)
+                                        @if ((string)Session["UserID_change"] == item.Nazwa_użytkownika)
+                                        {
+                                            <div style="height:50px; margin-top:auto; margin-bottom:auto;">
+                                                <form action="/ConfigAccount/ChangeName" method="post">
+
+                                                    <input style="display:none; " name="Nazwa_użytkownika" value=@item.Nazwa_użytkownika />
+                                                    <input class="inputText_B" type="text" id="Polecenie_logowania" name="Polecenie_logowania" value="nazwa" />
+                                                    <p><input style="background-color:#818181;margin-top:5px; color:white" type="submit" value="Zmień" /></p>
+
+                                                </form>
+                                            </div>
+                                        }
+
+                                    </td>
+
+                                    <td>
+                                        @if ((string)Session["UserID_change"] == item.Nazwa_użytkownika)
+                                        {
+
+                                            var connect = new SshClient((string)Session["ViewBag_ip"], Int32.Parse((string)Session["ViewBag_port"]), "root", "test");
+                                            connect.Connect();
+                                            var cl = connect.RunCommand("grep -E --color '" + item.Nazwa_użytkownika + "' /etc/shadow").Execute();
+                                            string v2 = cl.ToString();
+                                            int i = 0;
+                                            for (i = 0; i < v2.Length; i++)
+                                            {
+                                                if (v2[i] == ':') { break; }
+                                            }
+
+
+                                            if (v2[i + 1] != '!')
+                                            {
+                                                <form action="/ConfigAccount/Block" method="post">
+                                                    <input style="display:none;" name="Nazwa_użytkownika" value=@item.Nazwa_użytkownika />
+                                                    <p><input style="background-color:#ff0000; color:white" type="submit" value="Zablokuj" /></p>
+                                                </form>
+                                            }
+                                            else
+                                            {
+                                                <form action="/ConfigAccount/UnBlock" method="post">
+                                                    <input style="display:none;" name="Nazwa_użytkownika" value=@item.Nazwa_użytkownika />
+                                                    <p><input style="background-color:#36f509; color:white" type="submit" value="Odblokuj" /></p>
+                                                </form>
+                                            }
+
+
+                                            <form action="/ConfigAccount/Delete" method="post">
+                                                <input style="display:none;" name="Nazwa_użytkownika" type="text" value="@item.Nazwa_użytkownika" />
+                                                <input style="background-color:#fff201; color:white" type="submit" value="USUN" />
+                                            </form>
+                                        }
+                                    </td>
+
+                                    <td>
+                                        @if ((string)Session["UserID_change"] == item.Nazwa_użytkownika)
+                                        {
+                                            if (item.Haslo == "x")
+                                            {
+                                                <form action="/ConfigAccount/ChangePassword" method="post">
+
+                                                    <input style="display:none;" name="Nazwa_użytkownika" value=@item.Nazwa_użytkownika />
+                                                    <input class="inputText_B"  type="password" id="Haslo" name="Haslo" value="HASŁO" />
+                                                    <input class="inputText_B"  type="password" id="Polecenie_logowania" name="Polecenie_logowania" value="HASŁO" />
+                                                    <p><input style="background-color:#818181; color:white" type="submit" value="Zmień" /></p>
+
+                                                </form>
+                                            }
+                                        }
+                                    </td>
+
+
+                                    <td style="margin-top:0px;">
+                                        @Html.DisplayFor(modelItem => item.UID)
+                                        @if ((string)Session["UserID_change"] == item.Nazwa_użytkownika)
+                                        {
+
+                                            <form action="/ConfigAccount/Uid" method="post">
+                                                <input style="display:none;" name="Nazwa_użytkownika" value=@item.Nazwa_użytkownika />
+                                                <input class="inputText_B" type="number" id="UID" name="UID" value=@item.UID />
+                                                <input style="background-color:#818181; display:none; color:white" type="submit" value="Zmień" />
+                                            </form>
+                                        }
+                                    </td>
+
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.GID)
+                                        @if ((string)Session["UserID_change"] == item.Nazwa_użytkownika)
+                                        {
+                                            <form action="/ConfigAccount/Gid" method="post">
+                                                <input style="display:none;" name="Nazwa_użytkownika" value=@item.Nazwa_użytkownika />
+                                                <input class="inputText_B" type="number" id="GID" name="GID" value=@item.GID />
+                                                <input style="background-color:#818181; display:none; color:white" type="submit" value="Zmień" />
+                                            </form>
+                                        }
+                                    </td>
+                                    <td class="tablet_off">
+                                        @Html.DisplayFor(modelItem => item.Komentarz)
+                                        @if ((string)Session["UserID_change"] == item.Nazwa_użytkownika)
+                                        {
+                                            <form action="/ConfigAccount/Komentarz" method="post">
+                                                <input style="display:none;" name="Nazwa_użytkownika" value=@item.Nazwa_użytkownika />
+                                                <input style="color:#808080; max-width:100px;" type="text" id="Komentarz" name="Komentarz" value=@item.Komentarz />
+                                                <input style="background-color:#818181; display:none; color:white" type="submit" value="Zmień" />
+                                            </form>
+                                        }
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Katalog_domowy)
+                                        @if ((string)Session["UserID_change"] == item.Nazwa_użytkownika)
+                                        {
+                                            <form action="/ConfigAccount/Katalog_domowy" method="post">
+                                                <input style="display:none;" name="Nazwa_użytkownika" value=@item.Nazwa_użytkownika />
+                                                <input class="inputText_B" type="text" id="Katalog_domowy" name="Katalog_domowy" value=@item.Katalog_domowy />
+                                                <input style="background-color:#818181; display:none; color:white" type="submit" value="Zmień" />
+                                            </form>
+                                        }
+                                    </td>
+
+                                    <td class="tablet_off">
+                                        @Html.DisplayFor(modelItem => item.Polecenie_logowania)
+                                    </td>
+                                    <td>
+                                        @if ((string)Session["UserID_change"] != item.Nazwa_użytkownika)
+                                        {
+                                            <form action="/ConfigAccount/Edit" method="post">
+                                                <input style="display:none;" name="Nazwa_użytkownika" value=@item.Nazwa_użytkownika />
+                                                <input style="background-color:#1727a9; color:white" class="loadingOn" type="submit" value="Edycja" />
+                                            </form>
+                                        }
+                                    </td>
+
+
+
+                                </tr>
+
+                            }
+                        </tbody>
+                    </table>
+
+
+                    <div class="installbib">
+                        Instalacja pakietu:
+                        @Html.ActionLink(" 'EXPECT'", "Expect", "ConfigAccount", null, new { @style = ";" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>

@@ -1,0 +1,253 @@
+﻿@model List<Renci.SshNet.Sftp.SftpFile>
+
+@{
+    ViewBag.Title = ViewBag.l;
+    bool file_Folder = false;
+}
+
+@RenderPage("~/Views/Komunikat.cshtml")
+
+
+@if ((int)Session["WhatLogon"] == 0)
+{
+
+    <div style="text-align: center">
+        <br />
+        <div class="textyDiv">
+            <texty>Proszę wybrać profil połączenia</texty>
+        </div>
+        <br />
+        <table class="TableMain_2 " style="margin:auto;">
+            <tbody>
+                <tr>
+                    <td>SuperUser</td>
+                    <td>
+                        <form action="/ChangeFile/RootConnect" method="get">
+                            <fieldset>
+                                <p><input type="submit" class="w3-button w3-grey" value="POŁĄCZ" /></p>
+                            </fieldset>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Session["ViewBag_loginUser"]</td>
+                    <td>
+                        <form action="/ChangeFile/UserConnect" method="get">
+                            <fieldset>
+                                <p><input type="submit" class="w3-button w3-grey" value="POŁĄCZ" /></p>
+                            </fieldset>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        @Html.ActionLink("EDYCJA PROFILII", "IndexAccount", "ProfileUsers", null, new { @class = "w3-button w3-grey", @style = "margin-top:10px;" })
+
+    </div>
+}
+
+
+@if ((int)Session["WhatLogon"] != 0)
+{
+    <div class="przestrzen"></div>
+    <form action="/ChangeFile/Disconnect" method="get">
+        <input type="submit" class="w3-button w3-red" value="Rozłącz" />
+    </form>
+    <div class="przestrzen"></div>
+    <div style="text-align: center">
+        <table class="mobile_bottom connectionProfileList " style="margin:auto;">
+            <thead>
+                <tr>
+                    <th>Wyślij plik</th>
+                    <th>Tworzenie nowego Folderu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @using (Html.BeginForm("Sending", "ChangeFile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            @ViewBag.Error
+                            <input type="file" class="inputSend w3-white" name="uplfile" />
+                            <input type="submit" class="inputSend w3-button w3-cyan" value="Wyślij plik" />
+                        }
+
+                        @if (ViewBag.path != null)
+                        {
+                            File.Delete(ViewBag.path);
+                        }
+                    </td>
+                    <td>
+                        @using (Html.BeginForm("CreateFolder", "ChangeFile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            <input type="text" id="nameNewFolder" name="nameNewFolder" value="" />
+                            <input type="submit" class="w3-button w3-cyan" value="Utwórz folder" />
+                        }
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+        <table class="connectionProfileList " style="margin:auto;">
+            <thead>
+                <tr>
+                    <th>Nazwa</th>
+                    <th class="mobile_off tablet_off">Pełna scieżka do pliku</th>
+                    <th class="mobile_off">Rozmiar</th>
+                    <th></th>
+                    <th class="mobile_off"></th>
+                    <th class="mobile_off">Utwórz backup</th>
+                    <th>Zmien nazwe</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    bool empty = true;
+                }
+
+                @foreach (var item in Model)
+                {
+                    if (item.Name[0] != '.')
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td class="mobile_off tablet_off">@Html.DisplayFor(modelItem => item.FullName)</td>
+                            <td class="mobile_off">
+                                @{
+                                    for (int i = item.FullName.Length; i > 0; --i)
+                                    {
+                                        if (item.FullName[i - 1] != '/')
+                                        {
+                                            if (item.FullName[i - 1] == '.')
+                                            {
+
+                                                float abc = float.Parse(Html.DisplayFor(modelItem => item.Length).ToString()) / 1000000;
+                                                <div style="font-size:12px;">  @abc MB </div>
+                                                break;
+                                            }
+
+                                        }
+                                        else
+                                        {
+                                            <div style="font-size:12px;"> Folder plików </div>
+                                            break;
+                                        }
+                                    }
+                                }
+                            </td>
+                            <td>
+                                @{
+
+                                    for (int i = item.FullName.Length; i > 0; --i)
+                                    {
+                                        if (item.FullName[i - 1] != '/')
+                                        {
+                                            if (item.FullName[i - 1] == '.')
+                                            {
+                                                <form action="/ChangeFIle/Downloands" method="post">
+                                                    <fieldset>
+                                                        <input style="display:none;" name="Log" value="@item.FullName" />
+                                                        <p><input type="submit" value="POBIERZ" class="w3-button w3-green w3-small mobile_bottom" /></p>
+                                                    </fieldset>
+                                                </form>
+                                                file_Folder = true;
+                                                break;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <form action="/ChangeFIle/About" method="post">
+                                                <fieldset>
+                                                    <input style="display:none;" name="Log" value="@item.FullName" />
+                                                    <p><input type="submit" value="OTWÓRZ FOLDER" class="w3-button w3-yellow mobile_bottom" /></p>
+                                                </fieldset>
+                                            </form>
+                                            <form action="/ChangeFIle/DownloandLength" method="post">
+                                                <fieldset>
+                                                    <input style="display:none;" name="Log" value="@item.FullName" />
+                                                    <input type="submit" id="fileUploadExcel" onclick="return validateData();" class=" w3-button w3-green mobile_bottom" value="POBIERZ FOLDER" />
+                                                </fieldset>
+                                            </form>
+                                            file_Folder = false;
+                                            break;
+                                        }
+                                    }
+                                }
+                            </td>
+                            <td class="mobile_off">
+                                <form action="/ChangeFIle/Del" method="post" style="margin-left:auto; margin-top:auto; margin-bottom:auto; margin-right:auto; ">
+                                    <fieldset>
+                                        <input style="display:none;" name="del" value="@item.FullName" />
+                                        <p><input type="submit" value="USUŃ" class="w3-button w3-red mobile_bottom" /></p>
+                                    </fieldset>
+                                </form>
+                            </td>
+                            <td class="mobile_off">
+                                @if (file_Folder)
+                                {
+                                    <form action="/ServerFiles/CreateIndexBackup" method="post" style="margin-left:auto; margin-top:auto; margin-bottom:auto; margin-right:auto; ">
+                                        <fieldset>
+                                            <input style="display:none;" name="Log" value="@item.FullName" />
+                                            <p><input type="submit" value="STWORZ BACKUP" class="w3-button w3-blue mobile_bottom" /></p>
+                                        </fieldset>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form action="/ServerFiles/DownloandLengthBackup" method="post" style="margin-left:auto; margin-top:auto; margin-bottom:auto; margin-right:auto; ">
+                                        <fieldset>
+                                            <input style="display:none;" name="Log" value="@item.FullName" />
+                                            <p><input type="submit" value="STWORZ BACKUP FOLDERU" class="w3-button w3-blue mobile_bottom" /></p>
+                                        </fieldset>
+                                    </form>
+                                }
+                            </td>
+                            <td>
+                                <form action="/ChangeFIle/ZmienNazwe" method="post" style="margin-left:auto; margin-top:auto; margin-bottom:auto; margin-right:auto; ">
+                                    <fieldset>
+                                        <input style="display:none;" name="Del" value="@item.FullName" />
+                                        <input name="Del_new" class="tableinputtext" value="@item.Name" />
+                                        <p><input style="display:none;" type="submit" value="Zmień" /></p>
+                                    </fieldset>
+                                </form>
+                            </td>
+                            @{
+                                empty = false;
+                            }
+                        </tr>
+                    }
+
+                }
+
+                @if (empty)
+                {
+                    <tr>
+                        <td>... </td>
+                        <td>Folder jest pusty! </td>
+                        <td colspan="2">...</td>
+                        <td>...</td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <form action="/ChangeFIle/Undo" method="post">
+                            <fieldset>
+                                <p><input type="submit" value="Cofnij" class="button button4 uperr" /></p>
+                            </fieldset>
+                        </form>
+                    </td>
+                    <td colspan="6"></td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+
+}
+
+

@@ -1,0 +1,43 @@
+﻿@model Test_2.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Zarejestruj";
+}
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    @Html.AntiForgeryToken()
+    <table class="TableMain">
+        <thead>
+            <tr>
+                <th colspan="2">Utwórz nowe konto.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>E-mail / nazwa użytkownika</td>
+                <td>@Html.TextBoxFor(m => m.Email, new { @class = "form-control" })</td>
+            </tr>
+
+            <tr>
+                <td>Hasło</td>
+                <td>@Html.PasswordFor(m => m.Password, new { @class = "form-control" })</td>
+            </tr>
+
+            <tr>
+                <td>Potwierdz hasło</td>
+                <td>@Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })</td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="submit" class="w3-green" value="Zarejestruj " /></td>
+            </tr>
+
+        </tbody>
+    </table>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

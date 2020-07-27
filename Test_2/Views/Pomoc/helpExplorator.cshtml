@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "helpProfiles";
+}
+<style>
+    #demoparagraph {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 25px;
+        -moz-column-gap: 25px;
+        column-gap: 25px;
+        -webkit-column-rule: 1px solid rgba(28,110,164,0.7);
+        -moz-column-rule: 1px solid rgba(28,110,164,0.7);
+        column-rule: 1px solid rgba(28,110,164,0.7);
+    }
+
+    img {
+        padding: 0px;
+    }
+
+    .photoClip {
+        border-color: #bbbbbb;
+        width: 95%;
+        height: 95%;
+        border: solid;
+        border-width: 5px 1px 2px 1px;
+        border-color: #ffd800;
+    }
+
+    .etapy {
+        font-family: Impact, Charcoal, sans-serif;
+        font-size: 40px;
+        letter-spacing: 5.8px;
+        word-spacing: 6px;
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: small-caps;
+        text-transform: none;
+        text-align: right;
+        margin-top: 20px;
+    }
+
+
+    .tooltip-content {
+        display: none;
+    }
+
+    .chmurka {
+        position: absolute;
+        font-family: Arial, Helvetica;
+        color: #222222;
+        font-size: 8pt;
+        background: #FCF204;
+        padding: 3px;
+        border: 1px;
+        border-style: solid;
+        margin-top: 12px;
+        margin-left: 8px;
+        margin-right: -1000;
+    }
+</style>
+
+
+<div id="demoparagraph">
+
+    <p>
+        <div class="etapy">Etap 1</div>
+        <img class="photoClip" src="~/helpPhoto/p1.JPG" alt="Ed" />
+        <div class="etapy">Etap 2</div>
+        <img class="photoClip" src="~/helpPhoto/p2.JPG" alt="Ed" />
+        <div class="etapy">Etap 3</div>
+        <img class="photoClip" src="~/helpPhoto/m1.JPG" alt="Ed" />
+
+    </p>
+
+    <p>
+        <div class="etapy">Etap 4</div>
+        <img class="photoClip" src="~/helpPhoto/m2.JPG" alt="Ed" />
+        <div class="etapy">Etap 5</div>
+        <img class="photoClip" src="~/helpPhoto/m3.JPG" alt="Ed" />
+        <div class="etapy">Etap 6</div>
+        <img class="photoClip" src="~/helpPhoto/m4.JPG" alt="Ed" />
+    </p>
+</div>
+
+<div class="etapy" style="text-align:left;">Więcej informacji</div>
+Aby uzyskać więcej informacji należy kliknąć na dany wybrany obszar na ponizszym zdjęciu.
+<img src="~/helpPhoto/m3.jpg" usemap="#image-map" class="photoClip">
+
+<map name="image-map" id="image-map">
+    <area alt="Folder" onmouseup="javascript:alert('Wybrany obszar odpowiada za otwarcie lub pobranie danego pliku lub katalogu. Jeśli wybrany pozycja jest katalogiem aplikacja zapakuje wszystkie pliki z wybranego folderu do pliku *.RAR z ominięcie folderów wewnętrznych');" coords="548,387,715,419" shape="rect">
+    <area alt="Folder_1" onmouseup="javascript:alert('Wybrany obszar odpowiada za otwarcie lub pobranie danego pliku lub katalogu. Jeśli wybrany pozycja jest katalogiem aplikacja zapakuje wszystkie pliki z wybranego folderu do pliku *.RAR) z ominięcie folderów wewnętrznych');" coords="547,476,714,504" shape="rect">
+    <area alt="Folder_2" onmouseup="javascript:alert('Wybrany obszar odpowiada za otwarcie lub pobranie danego pliku lub katalogu. Jeśli wybrany pozycja jest katalogiem aplikacja zapakuje wszystkie pliki z wybranego folderu do pliku *.RAR) z ominięcie folderów wewnętrznych');" coords="549,565,712,594" shape="rect">
+    <area alt="Folder_3" onmouseup="javascript:alert('Wybrany obszar odpowiada za otwarcie lub pobranie danego pliku lub katalogu. Jeśli wybrany pozycja jest katalogiem aplikacja zapakuje wszystkie pliki z wybranego folderu do pliku *.RAR) z ominięcie folderów wewnętrznych');" coords="551,655,713,682" shape="rect">
+    <area alt="addfile" onmouseup="javascript:alert('Wybrany obszar odpowiada za wysyłanie plików do katalou w którym dany użytkownik znajduję się');" coords="156,89,761,197" shape="rect">
+    <area alt="createfolder" onmouseup="javascript:alert('Wybrany obszar odpowiada za tworzenie nowego folderu w danym aktualnie znajdującym się folderze');" coords="765,93,1249,197" shape="rect">
+    <area alt="NazwaPlikuFolderu" onmouseup="javascript:alert('Nazwa Pliku lub katalogu');" coords="15,230,167,731" shape="rect">
+    <area alt="pelnasciezka" onmouseup="javascript:alert('Wybrany obszar odpowiada za ukazanie pełnej ścieżki danego pliku lub katalogu');" coords="175,230,434,731" shape="rect">
+    <area alt="rodzajlub rozmiar" onmouseup="javascript:alert('Wybrany obszar odpowiada  ukazanie typu pliku oraz rozmiaru');" coords="439,230,535,728" shape="rect">
+    <area alt="delete" onmouseup="javascript:alert('Usuń wybrany plik/katalog');" coords="727,375,800,728" shape="rect">
+    <area alt="createbackup" onmouseup="javascript:alert('Tworzenie kopii pliku dzięku którem można przywrócić dany plik katalog do bazy.');" coords="808,233,1068,728" shape="rect">
+    <area alt="changename" onmouseup="javascript:alert('Zmiana nazwy pliku lub katalogu');" coords="1081,229,1331,734" shape="rect">
+    <area alt="Menu" onmouseup="javascript:alert('Menu strony ');" coords ="3,0,129,47" onmouseover="chmurka(event,this)" title="menu1" shape="rect">
+</map>

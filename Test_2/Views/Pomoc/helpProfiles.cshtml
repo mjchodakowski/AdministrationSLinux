@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "helpProfiles";
+}
+<style>
+    #demoparagraph {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 25px;
+        -moz-column-gap: 25px;
+        column-gap: 25px;
+        -webkit-column-rule: 1px solid rgba(28,110,164,0.7);
+        -moz-column-rule: 1px solid rgba(28,110,164,0.7);
+        column-rule: 1px solid rgba(28,110,164,0.7);
+    }
+
+    img {
+        padding:0px;
+    }
+
+    .photoClip {
+       
+        border-color:#bbbbbb;
+        width: 95%;
+        height: 95%;
+        border: solid;
+        border-width: 5px 1px 2px 1px;
+        border-color:#ffd800;
+    }
+
+    .etapy {
+        font-family: Impact, Charcoal, sans-serif;
+        font-size: 40px;
+        letter-spacing: 5.8px;
+        word-spacing: 6px;
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: small-caps;
+        text-transform: none;
+        text-align:right;
+        margin-top:20px;
+    }
+
+
+</style>
+
+<h2>Tworzenie profili systemów</h2>
+
+
+
+<div id="demoparagraph">
+
+    <p>
+        <div class="etapy">Etap 1</div>
+        <img class="photoClip" src="~/helpPhoto/p1.JPG" alt="Ed" />
+        <div class="etapy">Etap 2</div>
+        <img class="photoClip" src="~/helpPhoto/p2.JPG" alt="Ed" />
+        <div class="etapy">Etap 3</div>
+        <img class="photoClip" src="~/helpPhoto/p3.JPG" alt="Ed" />
+        <div class="etapy">Etap 4</div>
+        <img class="photoClip" src="~/helpPhoto/p4.JPG" alt="Ed" />
+    </p>
+
+    <p>
+        <div class="etapy">Etap 5</div>
+        <img class="photoClip" src="~/helpPhoto/p5.JPG" alt="Ed" />
+        <div class="etapy">Etap 6</div>
+        <img class="photoClip" src="~/helpPhoto/p6.JPG" alt="Ed" />
+        <div class="etapy">Etap 7</div>
+        <img class="photoClip" src="~/helpPhoto/p7.JPG" alt="Ed" />
+        <div class="etapy">Etap 8</div>
+        <img class="photoClip" src="~/helpPhoto/p8.JPG" alt="Ed" />
+    </p>
+
+    Brak uprawnień do SUperUser
+    Do połączenia przez SUPERUSER potrzebne jest nie tylko hasło ale także muszą być nadane uprawnienia.
+
+    Aby nadać uprawnienia należy z edytować /etc/ssh/sshd_config i  komentując następujący wiersz:
+
+    -PermitRootLogin without-password
+
+    a zaraz poniżej, dodać należy następującą linię:
+    PermitRootLogin yes
+
+    Następnie zrestartuj SSH:
+
+    service ssh reload
+
+</div>

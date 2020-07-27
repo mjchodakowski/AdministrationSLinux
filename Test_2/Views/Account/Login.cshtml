@@ -1,0 +1,44 @@
+﻿@using Test_2.Models
+@model LoginViewModel
+
+<div style="z-index:1;">
+    @RenderPage("~/Views/Komunikat.cshtml")
+</div>
+<div class="boxLogonOut">
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <img src="~/css/img_avatar2.png" alt="Avatar" class="ImageLogonOut">
+        <div class="TextLogonOutE-mail">
+            @Html.LabelFor(m => m.Email, new { @class = "inputValue" })
+        </div>
+        <div class="WriteLogonOut_email">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control table " })
+        </div> <div class="TextLogonOutPassword">
+            @Html.LabelFor(m => m.Password, new { @class = "" })
+        </div>
+        <div class="WriteLogonOutPassword">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+
+        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger table" })
+        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+
+        @Html.LabelFor(m => m.RememberMe, null, new { @class = "RememberMeLogonOutText" })
+        @Html.CheckBoxFor(m => m.RememberMe, new { @class = "RememberMeLogonOutCheckBoxFor" })
+
+        <input type="submit" value="Zaloguj" class="WriteLogonOutButtomLogon" />
+        @Html.ActionLink("Zarejestruj się jako nowy użytkownik", "Register", null, new { @class = "RegisteLogonOutLink" })
+
+        @Html.ActionLink("Nie pamiętasz hasła?", "ForgotPassword", null, new { @class = "RegisteLogonOut" })
+
+
+    }
+</div>
+<div style="height:600px;"></div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

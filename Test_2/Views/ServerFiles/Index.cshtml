@@ -1,0 +1,251 @@
+﻿@model IEnumerable<Test_2.Models.ServerFile>
+
+@{
+    ViewBag.Title = "Index";
+    long fullsizeTemp = long.Parse((string)Session["FullSizeFile"]);
+    long sizeFile__ = 0;
+    double nexti = 0;
+
+
+}
+@RenderPage("~/Views/Komunikat.cshtml")
+
+
+<div class="rotate_on">
+    <img class="image_rotate" src="~/css/rotating-phone.png" name="rotate" />
+
+</div>
+
+<div class="rotate_off">
+    <br />
+    <div class="textyDiv">
+        <texty>Dostępne pliki</texty>
+    </div>
+    <div style="text-align: center">
+        <table class="TableMain_2" style="margin:auto; ">
+            <thead>
+                <tr>
+                    <th>NAZWA</th>
+                    <th class="tablet_off">DATA UTWORZENIA</th>
+                    <th>ROZMIAR</th>
+                    <th>UPRAWNIENIA</th>
+                    <th class="tablet_off">TYP</th>
+                    <th colspan="2">Funkcje</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    sizeFile__ = sizeFile__ + long.Parse(item.Rozmiar_File);
+
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Nazwa)</td>
+                        <td class="tablet_off">@Html.DisplayFor(modelItem => item.DataUtworzenia)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Rozmiar)</td>
+                        <td>@Html.DisplayFor(modelItem => item.NalezyDo)</td>
+                        <td class="tablet_off">@Html.DisplayFor(modelItem => item.Typ)</td>
+                        <td>@Html.ActionLink("POBIERZ PLIK", "Downloands", new { id = item.Komentarz }, new { @class = "w3-button w3-green" })</td>
+                        <td>@Html.ActionLink("USUŃ PLIK", "DeleteIndex", new { id = item.Komentarz }, new { @class = "w3-button w3-red" })</td>
+                    </tr>
+                }
+            </tbody>
+
+            @{
+                string dopisek;
+                double sizeFile = 0;
+
+                if (sizeFile__ * 1.0E-12 > 1) { dopisek = (double.Parse(sizeFile__.ToString()) / 1000000000000) + " TB"; nexti = (double.Parse(sizeFile__.ToString()) / 1000000000000); }
+                else
+                {
+                    if (sizeFile__ * 1.0E-9 > 1) { dopisek = (double.Parse(sizeFile__.ToString()) / 1000000000) + " GB"; nexti = (double.Parse(sizeFile__.ToString()) / 1000000000); }
+                    else
+                    {
+                        if (sizeFile__ * 1.0E-6 > 1) { dopisek = (double.Parse(sizeFile__.ToString()) / 1000000) + " MB"; nexti = (double.Parse(sizeFile__.ToString()) / 1000000); }
+                        else
+                        {
+                            if (sizeFile__ * 0.001 > 1) { dopisek = (double.Parse(sizeFile__.ToString()) / 1000) + " KB"; nexti = (double.Parse(sizeFile__.ToString()) / 1000); }
+                            else
+                            {
+                                dopisek = sizeFile__ + " B";
+                                nexti = sizeFile__;
+
+                            }
+                        }
+                    }
+                }
+
+                string full = "";
+                long sizeFile_ = fullsizeTemp;
+
+                if (sizeFile_ * 1.0E-12 > 1) { full = (sizeFile_ / 1000000000000) + " TB"; }
+                else
+                {
+                    if (sizeFile_ * 1.0E-9 > 1) { full = (sizeFile_ / 1000000000) + " GB"; }
+                    else
+                    {
+                        if (sizeFile_ * 1.0E-6 > 1) { full = (sizeFile_ / 1000000) + " MB"; }
+                        else
+                        {
+                            if (sizeFile_ * 0.001 > 1) { full = (sizeFile_ / 1000) + " KB"; }
+                            else
+                            {
+                                full = sizeFile_ + " B";
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+            <tfood>
+                @if (Session["FullFile"] == null) { Session["FullFile"] = 0; }
+                @{
+                    if (Model.Count() < ((int)Session["FullFile"] * 0.25))
+                    {
+                        <tr>
+                            <th colspan="1"></th>
+                            <th colspan="6" style="color:rgba(7, 148, 23, 0.65); text-align:right;">Ilosc dotępnego miejsca @Model.Count() /  @Session["FullFile"]</th>
+                        </tr>
+                    }
+
+                    if (sizeFile__ < (fullsizeTemp * 0.25))
+                    {
+                        <tr>
+                            <th colspan="1"></th>
+                            <th colspan="6" style="color:#079417; text-align:right;">Ilosc zajętego miejsca @dopisek / @full</th>
+                        </tr>
+                    }
+                }
+
+                @{ if ((Model.Count()) < ((int)Session["FullFile"] * 0.75) && Model.Count() > ((int)Session["FullFile"] * 0.25))
+                    {
+                        <tr>
+                            <th colspan="1"></th>
+                            <th colspan="6" style="color:rgba(230, 219, 19, 0.81); text-align:right;">Brak wolnego miejsca @Model.Count() /  @Session["FullFile"]</th>
+                        </tr>
+                    }
+
+
+                    if (sizeFile__ < (fullsizeTemp * 0.75) && sizeFile__ > (fullsizeTemp * 0.25))
+                    {
+                        <tr>
+                            <th colspan="1"></th>
+                            <th colspan="6" style="color:rgba(230, 219, 19, 0.81); text-align:right;">Ilosc zajętego miejsca @dopisek / @full</th>
+                        </tr>
+                    }
+                }
+
+
+                @{ if ((Model.Count() > (int)Session["FullFile"] * 0.75) && (Model.Count() < (int)Session["FullFile"]))
+                    {
+                        <tr>
+                            <th colspan="1"></th>
+                            <th colspan="6" style="color:rgba(9, 48, 199, 0.84); text-align:right;">Ilosc dotępnego miejsca @Model.Count() /  @full</th>
+                        </tr>
+                    }
+
+                    if ((sizeFile__ > (fullsizeTemp * 0.75)) && sizeFile__ < fullsizeTemp)
+                    {
+                        <tr>
+                            <th colspan="1"></th>
+                            <th colspan="6" style="color:rgba(9, 48, 199, 0.84); text-align:right;">Ilosc zajętego miejsca @dopisek / @full</th>
+                        </tr>
+                    }
+                }
+
+                @{ if (Model.Count() >= (int)Session["FullFile"])
+                    {
+                        <tr>
+                            <th colspan="1"></th>
+                            <th colspan="6" style="color:rgba(255, 0, 0, 0.77); text-align:right;">Ilosc dotępnego miejsca @Model.Count() /  @full</th>
+                        </tr>
+                    }
+
+                    if (sizeFile__ >= fullsizeTemp)
+                    {
+                        <tr>
+                            <th colspan="1"></th>
+                            <th colspan="6" style="color:rgba(255, 0, 0, 0.77); text-align:right;">Ilosc zajętego miejsca @dopisek / @full</th>
+                        </tr>
+
+                    }
+                }
+
+                @{
+                    if (Model.Count() < (int)Session["FullFile"] && sizeFile__ < fullsizeTemp)
+                    {
+                        <tr>
+                            @using (Ajax.BeginForm("CreateIndex", "ServerFiles", new AjaxOptions() { HttpMethod = "post" }, new { enctype = "multipart/form-data" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <th colspan="2">
+                                    <div class="progress">
+                                        <div class="progress-bar">0 % </div>
+                                        <progress id="progressbar" value="0" max="100"></progress>
+                                    </div>
+                                </th>
+                                <th colspan="4"><input type="file" name="uplfile" id="ful" class="BootomMainProfile" /></th>
+                                <th>
+                                    <input type="submit" value="WYŚLIJ " class="w3-button w3-yellow" />
+
+                                </th>
+                            }
+
+
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <th colspan="7" style="text-align:center;">
+                                Osiągnieto maksymalną ilosc plików w serwerze<br />
+                                Aby zwiekszyć pojemosc plików skontaktuj się z administratorem
+                            </th>
+                        </tr>
+                    }
+                }
+
+            </tfood>
+
+
+        </table>
+    </div>
+    </div>
+
+
+    @section scripts {
+        <script src="http://malsup.github.com/jquery.form.js"></script>
+        <script>
+            (function () {
+                var bar = $('.progress-bar');
+                var percent = $('.progress-bar');
+                var status = $('#status');
+                $('form').ajaxForm({
+                    beforeSend: function () {
+                        $(".progress").css("display", "block");
+                        status.empty();
+                        var percentValue = '0%';
+                        bar.width(percentValue);
+                        percent.html(percentValue);
+                    },
+                    uploadProgress: function (event, position, total, percentComplete) {
+                        var percentValue = percentComplete + '%';
+                        bar.width(percentValue);
+                        percent.html(percentValue);
+                    },
+                    success: function (d) {
+                        var percentValue = '100%';
+                        bar.width(percentValue);
+                        percent.html(percentValue);
+                        $('#fu1').val('');
+
+                    },
+                    complete: function (xhr) {
+                        status.html(xhr.responseText);
+                        location.reload();
+                    }
+                });
+            })();</script>
+    }

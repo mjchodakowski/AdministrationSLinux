@@ -1,0 +1,167 @@
+﻿@model Test_2.Models.ProfilPolaczenia
+
+@{
+    ViewBag.Title = "Edycja profilu połączenia hosta";
+}
+
+
+<style>
+    table.connections {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        border: 4px solid #D1D1D1;
+        background-color: #111111;
+        width: 50%;
+        height: 200%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+        table.connections td, table.connections th {
+            border: 1px solid #000000;
+            padding: 3px 10px;
+        }
+
+        table.connections tbody td {
+            font-size: 14px;
+            color: #818181;
+        }
+
+        table.connections td:nth-child(even) {
+            background: #373737;
+        }
+
+        table.connections thead {
+            background: #818181;
+            background: -moz-linear-gradient(top, #a0a0a0 0%, #8d8d8d 66%, #818181 100%);
+            background: -webkit-linear-gradient(top, #a0a0a0 0%, #8d8d8d 66%, #818181 100%);
+            background: linear-gradient(to bottom, #a0a0a0 0%, #8d8d8d 66%, #818181 100%);
+            border-bottom: 3px solid #000000;
+        }
+
+            table.connections thead th {
+                font-size: 16px;
+                font-weight: bold;
+                color: #303030;
+                text-align: left;
+            }
+
+        table.connections tfoot {
+            font-size: 14px;
+            font-weight: bold;
+            color: #111111;
+            background: #000000;
+            background: -moz-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+            background: -webkit-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+            background: linear-gradient(to bottom, #404040 0%, #191919 66%, #000000 100%);
+            border-top: 2px solid #D1D1D1;
+        }
+
+            table.connections tfoot td {
+                font-size: 14px;
+            }
+
+            table.connections tfoot .links {
+                text-align: right;
+            }
+
+                table.connections tfoot .links a {
+                    display: inline-block;
+                    background: #1C214D;
+                    color: #FFFFFF;
+                    padding: 2px 8px;
+                    border-radius: 5px;
+                }
+</style>
+
+<h2>Edycja profilu połączenia hosta</h2>
+
+@if (@ViewBag.error != "")
+{
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Uwaga!</strong> @ViewBag.error
+        <div class="FontMaszyna">@ViewBag.error_pomoc</div>
+    </div>
+    Test_2.temp.Date.resetInfoBar = true;
+}
+
+@if (ViewBag.success != "")
+{
+    <div class="alert success">
+        <span class="closebtn">&times;</span>
+        <strong>Success!</strong>  @ViewBag.success
+        @ViewBag.success_pomoc
+    </div>
+    Test_2.temp.Date.resetInfoBar = true;
+}
+
+@if (ViewBag.info != "")
+{
+    <div class="alert info">
+        <span class="closebtn">&times;</span>
+        <strong>Info! </strong> @ViewBag.info
+        @ViewBag.info_pomoc
+    </div>
+    Test_2.temp.Date.resetInfoBar = true;
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <table class="connections" ; style="margin:auto">
+        <thead>
+            <tr>
+                <th>Opis</th>
+                <th>Dane</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <div class="links"><input type="submit" value="Save" class="btn btn-default" /> </div>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>@Html.LabelFor(model => model.Ip, htmlAttributes: new { @class = "control-label col-md-2", @style = "margin:auto" })</td>
+                <td>
+                    @Html.EditorFor(model => model.Ip, new { htmlAttributes = new { @class = "form-control", @style = "margin:auto" } })
+                    @Html.ValidationMessageFor(model => model.Ip, "", new { @class = "text-danger", @style = "margin:auto" })
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Port, htmlAttributes: new { @class = "control-label col-md-2", @style = "margin:auto" })</td>
+                <td>
+                    @Html.EditorFor(model => model.Port, new { htmlAttributes = new { @class = "form-control", @style = "margin:auto" } })
+                    @Html.ValidationMessageFor(model => model.Port, "", new { @class = "text-danger", @style = "margin:auto" })
+                </td>
+            </tr>
+
+            <tr>
+                <td>@Html.LabelFor(model => model.NazwaUser, htmlAttributes: new { @class = "control-label col-md-2", @style = "margin:auto" })</td>
+                <td>
+                    @Html.EditorFor(model => model.NazwaUser, new { htmlAttributes = new { @class = "form-control", @style = "margin:auto" } })
+                    @Html.ValidationMessageFor(model => model.NazwaUser, "", new { @class = "text-danger", @style = "margin:auto" })
+                </td>
+            </tr>
+            <tr>
+                <td> @Html.LabelFor(model => model.UserKey, htmlAttributes: new { @class = "control-label col-md-2", @style = "margin:auto" })</td>
+                <td>
+                    @Html.EditorFor(model => model.UserKey, new { htmlAttributes = new { @class = "form-control", @style = "margin:auto" } })
+                    @Html.ValidationMessageFor(model => model.UserKey, "", new { @class = "text-danger", @style = "margin:auto" })
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.RootKey, htmlAttributes: new { @class = "control-label col-md-2", @style = "margin:auto" })</td>
+                <td>
+                    @Html.EditorFor(model => model.RootKey, new { htmlAttributes = new { @class = "form-control", @style = "margin:auto" } })
+                    @Html.ValidationMessageFor(model => model.RootKey, "", new { @class = "text-danger", @style = "margin:auto" })
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}

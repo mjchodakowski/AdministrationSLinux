@@ -1,0 +1,57 @@
+﻿@model Test_2.Models.ServerFile
+
+@{
+    ViewBag.Title = "Usun plik";
+}
+@RenderPage("~/Views/Komunikat.cshtml");
+<br />
+<div class="textyDiv">
+    <texty>Napewno chcesz usunąć podany plik?</texty>
+</div>
+<div style="text-align: center">
+    <table class="TableMain" style="margin:auto;">
+        <thead>
+            <tr>
+                <th>...</th>
+                <th>...</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.Nazwa)</td>
+                <td>@Html.DisplayFor(model => model.Nazwa)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.DataUtworzenia)</td>
+                <td>@Html.DisplayFor(model => model.DataUtworzenia)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.Komentarz)</td>
+                <td>@Html.DisplayFor(model => model.Komentarz)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.Rozmiar)</td>
+                <td>@Html.DisplayFor(model => model.Rozmiar)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.NalezyDo)</td>
+                <td>@Html.DisplayFor(model => model.NalezyDo)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.Typ)</td>
+                <td>@Html.DisplayFor(model => model.Typ)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br />
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div style="margin-left:auto; margin-right:auto;" class="form-actions no-color">
+            <input type="submit" value="Usuń plik" class="BootomMainProfile" /> |
+            <br />
+            @Html.ActionLink("Wróć do listy plików", "Index")
+        </div>
+    }
+</div>

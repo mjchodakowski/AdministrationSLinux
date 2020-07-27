@@ -1,0 +1,45 @@
+﻿,@model List<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .demoFont {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 18px;
+        letter-spacing: -1px;
+        word-spacing: -1px;
+        color: #111;
+        font-weight: 400;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: uppercase;
+        text-align: center;
+    }
+</style>
+@RenderPage("~/Views/Komunikat.cshtml")
+<div class="textyDiv">
+    <texty>Edytor dostępu uzytkowników do danych funkcjonalnosci strony</texty>
+</div>
+<br />
+Podstawowe funkcjonalnosci
+<ul>
+    <li>root /- Pełen dostęp do strony (zmiana funkcji dostępowych, przegladanie plików użytkowników, przegladanie profili uzytkowników, usuwanie dodawanie uzytkowników</li>
+    <li>admin /- Dostęp do administracji fukncji dostępowych, dostęp do edycji użytkowniów, dostęp do profili wszystkich użytkowników</li>
+    <li>user-full /- Pełen dostęp do funkcjonalnosci strony ( server FTP, połączenie SFTP(Linux), edytor Uzytkownika (Linux),konsola (linux) </li>
+    <li>user-full-10-50 /- Pełen dostęp do usług z ograniczeniem maksymalnej rozmiaru plików do 10MB oraz z iloscią maksymalna plików równą 50</li>
+    <li>user-full-100-200 /- Pełen dostęp do usług z ograniczeniem maksymalnej rozmiaru plików do 10MB oraz z iloscią maksymalna plików równą 200</li>
+    <li>user-part-server /- Dostęp do funkcjonalnosci (Linux) - konsola, edycja uzytkownika, konsola</li>
+    <li>user-part-ftp-full /- Dostęp tylko do usługi Servera FTP(brak ograniczenia)</li>
+    <li>user-part-ftp-10-50 /- Dostęp tylko do usługi Servera FTP z ograniczeniem maksymalnej rozmiaru plików do 10MB oraz z iloscią maksymalna plików równą 50</li>
+    <li>user-part-ftp-100-200 /- Dostęp tylko do usługi Servera FTP z ograniczeniem maksymalnej rozmiaru plików do 100MB oraz z iloscią maksymalna plików równą 200</li>
+    <li>user-part-ftp-1000-500 /- Dostęp tylko do usługi Servera FTP z ograniczeniem maksymalnej rozmiaru plików do 1,024GB</li>
+    <li>user-part-ftp-10000-1000 /- Dostęp tylko do usługi Servera FTP z ograniczeniem maksymalnej rozmiaru plików do 10,024GB</li>
+</ul> 
+<br />
+<div style="text-align: center">
+   @Html.ActionLink("Rejestracja funkcji", "RegisterRole", "Account", null, new { @class = "w3-button w3-green" })
+
+
+</div>

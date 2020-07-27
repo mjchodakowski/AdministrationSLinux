@@ -1,0 +1,58 @@
+﻿@model Test_2.Models.RegisterViewModel
+@{
+    ViewBag.Title = "RegisterRole";
+}
+<div class="rotate_on">
+    <img class="image_rotate" src="~/css/rotating-phone.png" name="rotate" />
+
+</div>
+<div class="rotate_off">
+    <div class="textyDiv">
+        <texty>
+            Rejestracja funkcji
+        </texty>
+    </div>
+
+    @using (Html.BeginForm("RegisterRole", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div style="text-align: center">
+            <table class="TableMain">
+                <tbody>
+                    <tr>
+                        <td> @Html.DropDownList("UserName")</td>
+                        <td>UŻYTKOWNIK</td>
+                    <tr />
+                    <tr>
+                        <td>
+                            @Html.DropDownList("Name", new List<SelectListItem> {
+                                   new SelectListItem{ Text="Pełen dostęp do strony (zmiana funkcji dostępowych, przegladanie plików użytkowników, przegladanie profili uzytkowników, usuwanie dodawanie uzytkowników", Value = "root" },
+                                   new SelectListItem{ Text="Dostęp do administracji fukncji dostępowych, dostęp do edycji użytkowniów, dostęp do profili wszystkich użytkowników", Value = "admin" },
+                                   new SelectListItem{ Text="Pełen dostęp do funkcjonalnosci strony ( server FTP, połączenie SFTP(Linux), edytor Uzytkownika (Linux),konsola (linux)", Value = "user-full" },
+                                   new SelectListItem{ Text="Pełen dostęp do usług z ograniczeniem maksymalnej rozmiaru plików do 10MB oraz z iloscią maksymalna plików równą 50", Value = "user-full-10-50" },
+                                   new SelectListItem{ Text="Pełen dostęp do usług z ograniczeniem maksymalnej rozmiaru plików do 100MB oraz z iloscią maksymalna plików równą 200", Value = "user-full-100-200" },
+                                   new SelectListItem{ Text="Dostęp do funkcjonalnosci (Linux) - konsola, edycja uzytkownika, konsola", Value = "user-part-server" },
+                                   new SelectListItem{ Text="Dostęp tylko do usługi Servera FTP(brak ograniczenia)", Value = "user-part-ftp-full" },
+                                   new SelectListItem{ Text="Dostęp tylko do usługi Servera FTP z ograniczeniem maksymalnej rozmiaru plików do 10MB oraz z iloscią maksymalna plików równą 50", Value = "user-part-ftp-10-50" },
+                                   new SelectListItem{ Text="Dostęp tylko do usługi Servera FTP z ograniczeniem maksymalnej rozmiaru plików do 100MB oraz z iloscią maksymalna plików równą 200", Value = "user-part-ftp-100-200" },
+                                   new SelectListItem{ Text="Dostęp tylko do usługi Servera FTP z ograniczeniem maksymalnej rozmiaru plików do 1,024GB", Value = "user-part-ftp-1000-500" },
+                                   new SelectListItem{ Text="Dostęp tylko do usługi Servera FTP z ograniczeniem maksymalnej rozmiaru plików do 10,024GB", Value = "user-part-ftp-10000-1000" },
+                                })
+                        </td>
+                        <td>PROFIL DOSTĘPU</td>
+
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>@Html.ValidationSummary("", new { @class = "text-danger" })</td>
+                        <td><input type="submit" class="w3-buttom w3-green" value="PRZYDZIEL UPRAWNIENIE" /></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    }
+</div>
+
+@Scripts.Render("~/bundles/jqueryval")

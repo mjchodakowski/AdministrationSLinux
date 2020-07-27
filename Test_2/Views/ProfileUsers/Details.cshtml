@@ -1,0 +1,52 @@
+﻿@model Test_2.Models.ProfileUser
+
+@{
+    ViewBag.Title = "Profil";
+}
+
+<h2></h2>
+@RenderPage("~/Views/Komunikat.cshtml")
+@Html.ActionLink("POWRÓT DO LISTY", "Index", null, new { @class = "w3-button w3-grey", @style="margin:10px;"})
+<div style="text-align: center">
+
+    <table class="TableMain" style="margin:auto;">
+        <tbody>
+
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.ProfilNalezyDo)</td>
+                <td>@Html.DisplayFor(model => model.ProfilNalezyDo)</td>
+            </tr>
+
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.ProfileName)</td>
+                <td>@Html.DisplayFor(model => model.ProfileName)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.ProfileIp)</td>
+                <td>@Html.DisplayFor(model => model.ProfileIp)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.ProfilePort)</td>
+                <td>@Html.DisplayFor(model => model.ProfilePort)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.ProfileNameUser)</td>
+                <td>@Html.DisplayFor(model => model.ProfileNameUser)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.ProfileKeyUser)</td>
+                <td>@Html.DisplayFor(model => model.ProfileKeyUser)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.ProfileKeyRoot)</td>
+                <td>@Html.DisplayFor(model => model.ProfileKeyRoot)</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p style="margin:auto; margin:auto">
+    <br />
+    @Html.ActionLink("EDYCJA PROFILU", "Edit", new { id = Model.ProfileUserId }, new { @class = "w3-button w3-blue", @style="margin-left:100px" })
+    <br />
+</p>

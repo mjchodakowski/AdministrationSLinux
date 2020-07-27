@@ -1,0 +1,1551 @@
+﻿
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Co zrobić, aby strony z menu wczytywały się do ramki umieszczonej bezpośrednio w treści?">
+    <meta name="Keywords" content="wczytywanie, ramki, lokalne, pływające, odsyłacz, odnośnik, hiperłącze, link, kotwica">
+    <meta name="Author" content="Sławomir Kokłowski">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #000;
+            font: 16px Arial,Helvetica,sans-serif
+        }
+
+        a {
+            text-decoration: none
+        }
+
+            a img {
+                border: 0
+            }
+
+        abbr, acronym {
+            cursor: help;
+            border-bottom-width: 1px;
+            border-bottom-style: dotted
+        }
+
+        .u {
+            text-decoration: underline
+        }
+
+        .s {
+            text-decoration: line-through
+        }
+
+        .nowrap {
+            white-space: nowrap
+        }
+
+        .ok {
+            color: #080
+        }
+
+        .nok {
+            color: #f00
+        }
+
+        dl.dl dt {
+            font-weight: bold;
+            margin-top: 1em
+        }
+
+        table.table {
+            font-size: 14px;
+            border: 1px solid #888;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: normal
+        }
+
+            table.table caption {
+                font-weight: bold;
+                margin: 1em auto 1ex;
+                color: #888
+            }
+
+            table.table th {
+                color: #fff;
+                background: #888;
+                padding: 5px
+            }
+
+            table.table td {
+                border: 1px solid #888;
+                padding: 2px 5px
+            }
+
+            table.table ul.plus li {
+                background-position: -55px -350px
+            }
+
+            table.table ul.minus li {
+                background-position: -26px -376px
+            }
+
+        .generator {
+            margin: 1em auto;
+            color: #666;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px
+        }
+
+            .generator th {
+                background: #888;
+                color: #fff
+            }
+
+            .generator td {
+                background: #ddd;
+                color: #000
+            }
+
+            .generator th, .generator td {
+                vertical-align: top;
+                padding: 3px;
+                font-size: 14px
+            }
+
+                .generator th.col {
+                    text-align: right;
+                    padding-right: 1ex;
+                    width: 150px
+                }
+
+            .generator .tfoot td {
+                background: transparent;
+                padding: 5px;
+                text-align: center
+            }
+
+            .generator .select {
+                text-align: right
+            }
+
+                .generator .select input {
+                    font-size: 10px
+                }
+
+        .CONTENT .zaznacz, .CONTENT .zobacz {
+            font-size: 10px;
+            text-align: right;
+            color: #666
+        }
+
+        .CONTENT .zaznacz {
+            width: 90%;
+            position: relative;
+            left: 25px
+        }
+
+            .CONTENT .zaznacz a:link, .CONTENT .zaznacz a:visited, .CONTENT .zobacz a:link, .CONTENT .zobacz a:visited {
+                padding: 2px 5px;
+                background: #f5f5f5;
+                color: #666;
+                border: 1px solid #dcdcdc;
+                border-radius: 2px;
+                text-decoration: none
+            }
+
+            .CONTENT .zaznacz a:hover, .CONTENT .zobacz a:hover {
+                color: #000;
+                border-color: #ccc
+            }
+
+        .skladnia {
+            overflow: auto;
+            width: 90%;
+            padding: 20px 12px 20px 13px;
+            background: #ffc;
+            border-radius: 5px;
+            font-size: 13px
+        }
+
+        .kod, .html, .css, .js {
+            font-size: 12px;
+            font-family: "Courier New",Courier,monospace;
+            margin: 1em 0;
+            display: block;
+            overflow: auto;
+            width: 90%;
+            padding: 2px 5px 20px;
+            border-radius: 5px
+        }
+
+        .kod {
+            background: #eee url(../pliki/kod.gif) repeat-y left top;
+            padding-left: 20px
+        }
+
+        .html {
+            background: #eee url(../pliki/kod_html.gif) repeat-y left top;
+            padding-left: 20px
+        }
+
+        .css {
+            background: #eee url(../pliki/kod_css.gif) repeat-y left top;
+            padding-left: 20px
+        }
+
+        .js {
+            background: #eee url(../pliki/kod_js.gif) repeat-y left top;
+            padding-left: 20px
+        }
+
+        .parametry {
+            font-style: italic;
+            display: block;
+            margin: 1em 0
+        }
+
+            .parametry ul, .parametry ol {
+                margin-top: 0
+            }
+
+        code {
+            font-family: "Courier New",Courier,monospace
+        }
+
+            .skladnia var, .parametry var, .kod var, .html var, .css var, .js var, code var {
+                font-style: italic;
+                font-weight: bold;
+                color: #008
+            }
+
+        .interpretacja {
+            color: #005a9c;
+            text-align: right
+        }
+
+        ul.odstep li, ol.odstep li {
+            margin-bottom: 1em
+        }
+
+            ul.odstep li li, ol.odstep li li {
+                margin-bottom: 0
+            }
+
+        .odstep .odstep {
+            margin-top: 1em
+        }
+
+        .odstep li .odstep li {
+            margin-bottom: 1em
+        }
+
+        dl.odstep dt {
+            font-weight: bold
+        }
+
+        dl.odstep dd {
+            margin-bottom: 1em
+        }
+
+        .wskazowka, .uwaga, .wazne, .deprecated {
+            display: block;
+            margin: 1em 0;
+            padding: 10px 20px 10px 40px;
+            border-radius: 5px;
+            background-image: url(../pliki/-.png?3);
+            background-repeat: no-repeat;
+            color: #000
+        }
+
+        .wskazowka {
+            background-color: #efb;
+            background-position: -173px -205px
+        }
+
+        .uwaga {
+            background-color: #fea;
+            background-position: -139px -239px
+        }
+
+        .wazne {
+            background-color: #fed;
+            background-position: -105px -273px
+        }
+
+        .deprecated {
+            background-color: #def;
+            background-position: -71px -306px
+        }
+
+        .ostrzezenie {
+            color: #c00
+        }
+
+            .wskazowka ul, .wskazowka ol, .uwaga ul, .uwaga ol, .wazne ul, .ostrzezenie ol {
+                margin-top: 0
+            }
+
+        .przyklad {
+            background: url(../pliki/-.png?3) no-repeat -189px -181px;
+            padding: 2px 0 5px 25px;
+            margin: 2em 0 1em;
+            color: #005a9c;
+            text-transform: uppercase;
+            border-bottom: 1px solid #005a9c
+        }
+
+        .zrodlo {
+            font-style: italic;
+            text-align: right;
+            font-size: 12px
+        }
+
+        .CONTENT h1, .CONTENT h2, .CONTENT h3, .CONTENT h4, .CONTENT h5, .CONTENT h6, .CONTENT .kod, .CONTENT .html, .CONTENT .css, .CONTENT .js, .CONTENT .skladnia {
+            line-height: normal
+        }
+
+        .CONTENT h3, .CONTENT h4, .CONTENT h5, .CONTENT h6 {
+            font-weight: bold
+        }
+
+        .CONTENT h2, .CONTENT h3, .CONTENT h4 {
+            padding-top: 60px;
+            margin: -50px 0 0
+        }
+
+        .CONTENT h1 {
+            text-transform: uppercase;
+            font-weight: normal;
+            font-size: 32px;
+            padding-bottom: 10px;
+            margin: 1em 0;
+            color: #005a9c;
+            border-bottom: 1px solid #005a9c
+        }
+
+        .CONTENT h2 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #005a9c
+        }
+
+        .CONTENT h3 {
+            font-size: 18px
+        }
+
+        .CONTENT h4 {
+            font-size: 16px
+        }
+
+        .CONTENT h5 {
+            font-size: 12px
+        }
+
+        .CONTENT h6 {
+            font-size: 10px
+        }
+
+        .CONTENT a {
+            text-decoration: underline
+        }
+
+            .CONTENT a:link {
+                color: #00c
+            }
+
+            .CONTENT a:visited {
+                color: #609
+            }
+
+            .CONTENT a:hover {
+                background-color: #ffa
+            }
+
+            .CONTENT a:active {
+                color: #c00
+            }
+
+            .CONTENT a.http {
+                background-image: url(../pliki/-.png?3);
+                background-repeat: no-repeat;
+                background-position: 100% 0;
+                padding-right: 16px
+            }
+
+        .CONTENT .linki a {
+            text-decoration: none
+        }
+
+            .CONTENT .linki a:link, .CONTENT .linki a:visited {
+                color: #000
+            }
+
+            .CONTENT .linki a:hover {
+                background-color: transparent;
+                opacity: .7
+            }
+
+        .CONTENT hr {
+            color: #005a9c;
+            border-width: 1px 0 0;
+            border-style: solid;
+            border-color: #005a9c;
+            margin: 4em 0
+        }
+
+        .CONTENT ol.lista {
+            list-style-type: upper-roman
+        }
+
+            .CONTENT ol.lista ol {
+                list-style-type: decimal
+            }
+
+                .CONTENT ol.lista ol ol {
+                    list-style-type: lower-alpha
+                }
+
+        ul.plus, ul.minus {
+            margin: 1em 0;
+            padding: 0
+        }
+
+            ul.plus li, ul.minus li {
+                list-style-type: none;
+                display: block;
+                background-image: url(../pliki/-.png?3);
+                background-repeat: no-repeat;
+                padding-left: 22px;
+                margin: 0 0 .5ex
+            }
+
+            ul.plus li {
+                background-position: -55px -347px
+            }
+
+            ul.minus li {
+                background-position: -26px -373px
+            }
+
+        .NAV {
+            display: block;
+            list-style-type: none;
+            padding: 0
+        }
+
+            .NAV li {
+                display: block;
+                list-style-type: none;
+                margin: 0;
+                padding: 0
+            }
+
+        .NAV {
+            clear: both;
+            padding-top: 50px;
+            margin: 1em 0;
+            overflow: hidden
+        }
+
+            .NAV li {
+                float: left;
+                overflow: hidden;
+                width: 50%
+            }
+
+        .CONTENT .NAV a:link, .CONTENT .NAV a:visited {
+            display: block;
+            color: #000;
+            text-transform: uppercase;
+            text-decoration: none
+        }
+
+        .CONTENT .NAV a:hover {
+            background-color: transparent;
+            opacity: .7
+        }
+
+        .NAV .PREV a {
+            text-align: left;
+            background: url(../pliki/-.png?3) no-repeat 0 -399px;
+            padding-left: 20px
+        }
+
+        .NAV .NEXT a {
+            text-align: right;
+            background: url(../pliki/next.png) no-repeat 100% 3px;
+            padding-right: 20px
+        }
+
+        .PAG {
+            clear: both;
+            text-align: center;
+            margin: 2em 0 1em
+        }
+
+        .PAG_NAV {
+            clear: both;
+            display: block;
+            list-style-type: none;
+            margin: 1em 0;
+            padding: 20px 0 0;
+            text-align: center
+        }
+
+            .PAG_NAV li {
+                display: inline;
+                list-style-type: none;
+                margin: 0 1em;
+                padding: 0;
+                white-space: nowrap;
+                text-transform: uppercase
+            }
+
+            .PAG_NAV a {
+                background-image: url(../pliki/-.png?3);
+                background-repeat: no-repeat;
+                padding-left: 22px;
+                text-decoration: none
+            }
+
+            .PAG_NAV .TOP a {
+                background-position: -189px -103px
+            }
+
+            .PAG_NAV .HOME a {
+                background-position: -189px -129px
+            }
+
+            .PAG_NAV .PRINT a {
+                background-position: -189px -155px
+            }
+
+            .PAG_NAV a:link, .PAG_NAV a:visited {
+                color: #000
+            }
+
+            .PAG_NAV a:hover {
+                background-color: transparent;
+                opacity: .7
+            }
+
+        ul.artykuly {
+            list-style: none;
+            display: block;
+            padding: 0
+        }
+
+            ul.artykuly li {
+                list-style: none;
+                display: block;
+                margin: 0;
+                padding: 0
+            }
+
+        ul.artykuly {
+            margin: 1em 0
+        }
+
+            ul.artykuly li {
+                margin-bottom: 1em;
+                clear: right;
+                overflow: hidden
+            }
+
+            ul.artykuly .artykuly_obrazek {
+                float: left;
+                margin-right: 10px
+            }
+
+            ul.artykuly .artykuly_opis {
+                overflow: hidden
+            }
+
+                ul.artykuly .artykuly_opis a {
+                    font-weight: bold
+                }
+
+                ul.artykuly .artykuly_opis p a {
+                    font-weight: normal
+                }
+
+            ul.artykuly p {
+                margin: .5ex 0 0
+            }
+
+        dl.news, dl.news dt, dl.news dd, dl.box, dl.box dt, dl.box dd {
+            display: block;
+            margin: 0;
+            padding: 0
+        }
+
+            dl.news dt, dl.box dt {
+                border-bottom: 1px solid #005a9c;
+                padding-bottom: 7px;
+                margin-top: 2em;
+                margin-bottom: 1ex;
+                text-transform: uppercase;
+                font-size: 16px
+            }
+
+                dl.news dt, dl.news dt a:link, dl.news dt a:visited, dl.box dt, dl.box dt a:link, dl.box dt a:visited {
+                    color: #005a9c;
+                    text-decoration: none
+                }
+
+                    dl.news dt a:hover, dl.box dt a:hover {
+                        background-color: transparent;
+                        opacity: .7
+                    }
+
+            dl.news dd, dl.box dd {
+                margin-bottom: 1em;
+                clear: right;
+                overflow: hidden
+            }
+
+            dl.news .news_date {
+                font-size: smaller;
+                opacity: .5;
+                margin-bottom: 1ex
+            }
+
+            dl.news .news_img {
+                float: left;
+                margin-right: 10px
+            }
+
+            dl.news .news_more, dl.box .link_more {
+                font-size: smaller;
+                text-align: right;
+                margin: 1em 0
+            }
+
+            dl.news .news_more {
+                margin-bottom: 0
+            }
+
+            dl.news ol, dl.news ul {
+                margin: 0 0 0 75px;
+                padding-left: 0
+            }
+
+                dl.news ol li {
+                    margin-bottom: .5em
+                }
+
+            dl.news .news_author {
+                font-style: italic;
+                font-size: smaller;
+                margin-top: 0
+            }
+
+        form .artykuly_obrazek img, #COMMENTS .artykuly_obrazek img {
+            border-radius: 25px
+        }
+
+        #skip_to_content {
+            position: absolute;
+            top: -9999px
+        }
+
+        #TOP {
+            padding-top: 60px;
+            margin-top: -60px
+        }
+
+        #MAIN {
+            width: 1260px;
+            margin: 0 auto;
+            overflow: hidden
+        }
+
+        .google {
+            position: fixed;
+            z-index: 101;
+            top: 0;
+            left: 30%;
+            width: 225px;
+            padding: 10px 30px
+        }
+
+            .google .google_input {
+                color: transparent;
+                background: #fff url(//www.google.com/cse/intl/pl/images/google_custom_search_watermark.gif) no-repeat 8px center;
+                font-size: 16px;
+                border: 1px solid #888;
+                padding: 3px 35px 0 8px;
+                height: 24px;
+                width: 100%
+            }
+
+                .google .google_input:focus {
+                    color: #000;
+                    background-image: none;
+                    border: 1px solid #4d90fe;
+                    box-shadow: 0 1px 2px rgba(0,0,0,0.3) inset
+                }
+
+                    .google .google_input:focus + .google_button {
+                        background-color: #4285f4;
+                        opacity: 1
+                    }
+
+            .google .google_button {
+                width: 13px;
+                height: 13px;
+                padding: 7px;
+                background-color: #888;
+                color: #fff;
+                position: absolute;
+                top: 11px;
+                right: -14px
+            }
+
+                .google .google_button:hover {
+                    opacity: .7
+                }
+
+        #HEADER h1 {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            background: #eee;
+            margin: 0;
+            box-shadow: 0 0 10px 0 #999;
+            font-size: 10px;
+            line-height: 1
+        }
+
+            #HEADER h1 a {
+                color: #333;
+                display: block;
+                margin-top: 5px;
+                margin-left: 35px;
+                width: 250px;
+                background: url(../pliki/-.png?3) no-repeat -159px -53px;
+                padding-left: 55px
+            }
+
+            #HEADER h1 strong {
+                display: block;
+                font-size: 30px
+            }
+
+            #HEADER h1, #HEADER h1 * {
+                font-weight: normal
+            }
+
+        #HEADER ul {
+            display: block;
+            list-style: none;
+            padding: 0
+        }
+
+        #HEADER li {
+            display: block;
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        #HEADER ul {
+            background: #333;
+            width: 1260px;
+            height: 41px;
+            overflow: hidden;
+            margin: 50px auto 0;
+            font-size: 15px
+        }
+
+        #HEADER li {
+            float: left
+        }
+
+            #HEADER li a {
+                display: block;
+                padding: 10px;
+                border-bottom: 4px solid #888;
+                white-space: nowrap;
+                color: #fff
+            }
+
+                #HEADER li a:hover {
+                    background-color: #888
+                }
+
+        #HEADER .nav_start a {
+            width: 23px;
+            padding-left: 0;
+            padding-right: 0;
+            text-indent: -9999px;
+            outline: 0;
+            background: url(../pliki/-.png?3) no-repeat -38px -44px
+        }
+
+        #HEADER .nav_html a {
+            border-bottom-color: #dc4b3e
+        }
+
+            #HEADER .nav_html a:hover {
+                background: #dc4b3e
+            }
+
+        #HEADER .nav_css a {
+            border-bottom-color: #3f8cf4
+        }
+
+            #HEADER .nav_css a:hover {
+                background: #3f8cf4
+            }
+
+        #HEADER .nav_js a {
+            border-bottom-color: #f3df49
+        }
+
+            #HEADER .nav_js a:hover {
+                background: #f3df49;
+                color: #2e2e2e
+            }
+
+        #HEADER .nav_scripts a {
+            border-bottom-color: #20a461
+        }
+
+            #HEADER .nav_scripts a:hover {
+                background: #20a461
+            }
+
+        #MENU {
+            float: right;
+            overflow: hidden;
+            width: 300px
+        }
+
+            #MENU li {
+                margin-bottom: 5px
+            }
+
+            #MENU .header {
+                border-bottom: 1px solid #005a9c;
+                padding-bottom: 7px;
+                margin-top: 2em;
+                text-transform: uppercase;
+                font-size: 16px;
+                color: #005a9c
+            }
+
+                #MENU .header a {
+                    color: #005a9c
+                }
+
+        #MAIN_MENU, #MAIN_MENU dt {
+            margin: 0;
+            padding: 0
+        }
+
+            #MAIN_MENU dd {
+                margin: 0
+            }
+
+        #MAIN_MENU {
+            padding-top: 50px;
+            margin-top: -50px
+        }
+
+            #MAIN_MENU dt {
+                position: fixed;
+                z-index: 101;
+                top: 10px;
+                width: 88px;
+                height: 20px;
+                overflow: hidden;
+                padding-top: 8px;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 2px;
+                font-weight: bold;
+                font-size: 13px;
+                white-space: nowrap;
+                cursor: pointer;
+                text-align: center;
+                line-height: 1
+            }
+
+                #MAIN_MENU dt:hover {
+                    opacity: .7
+                }
+
+                #MAIN_MENU dt#kategoria_html {
+                    border-color: #dc4b3e;
+                    background: #dc4b3e;
+                    color: #fff;
+                    right: 445px
+                }
+
+                #MAIN_MENU dt#kategoria_css {
+                    border-color: #3f8cf4;
+                    background: #3f8cf4;
+                    color: #fff;
+                    right: 345px
+                }
+
+                #MAIN_MENU dt#kategoria_js {
+                    border-color: #f3df49;
+                    background: #f3df49;
+                    color: #2e2e2e;
+                    right: 245px
+                }
+
+                #MAIN_MENU dt#kategoria_skrypty {
+                    border-color: #20a461;
+                    background: #20a461;
+                    color: #fff;
+                    right: 145px
+                }
+
+                #MAIN_MENU dt#kategoria_info {
+                    border-color: #dcdcdc;
+                    background: #f5f5f5;
+                    color: #444;
+                    right: 45px
+                }
+
+            #MAIN_MENU dd {
+                padding: 3px 20px;
+                color: #000
+            }
+
+            #MAIN_MENU dt#kategoria_html ~ dd {
+                background: #fee
+            }
+
+            #MAIN_MENU dt#kategoria_css ~ dd {
+                background: #def
+            }
+
+            #MAIN_MENU dt#kategoria_js ~ dd {
+                background: #ffb
+            }
+
+            #MAIN_MENU dt#kategoria_skrypty ~ dd {
+                background: #cfc
+            }
+
+            #MAIN_MENU dt#kategoria_info ~ dd {
+                background: #eee
+            }
+
+            #MAIN_MENU ul {
+                margin-top: 7px;
+                margin-bottom: 0
+            }
+
+            #MAIN_MENU dd a {
+                color: #000;
+                background: url(../pliki/next.png) no-repeat 0 0;
+                padding-left: 20px
+            }
+
+                #MAIN_MENU dd a:hover {
+                    opacity: .7
+                }
+
+            #MAIN_MENU ul a {
+                background: none;
+                padding-left: 0
+            }
+
+        #INFO {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.3
+        }
+
+            #INFO a {
+                color: #333
+            }
+
+                #INFO a:hover {
+                    opacity: .7
+                }
+
+        .reklama {
+            text-align: center;
+            margin: 1em 0
+        }
+
+        #INFO .reklama .BOO {
+            display: block;
+            width: 134px;
+            height: 58px;
+            background: url(../pliki/-.png?3) no-repeat 0 -85px;
+            text-align: left;
+            text-indent: -9999px;
+            outline: 0;
+            margin: auto
+        }
+
+        #SEARCH, .SEARCH {
+            margin: 1em 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            background: #eee;
+            color: #666;
+            font-size: 12px;
+            text-align: center
+        }
+
+            #SEARCH form {
+                margin-bottom: 5px;
+                overflow: hidden
+            }
+
+            #SEARCH div {
+                clear: both
+            }
+
+            #SEARCH .text, .SEARCH .text, .SEARCH select {
+                border: 1px solid #888;
+                padding: 5px;
+                vertical-align: middle
+            }
+
+            #SEARCH .text {
+                width: 216px;
+                float: left
+            }
+
+            #SEARCH .button, .SEARCH .button {
+                border: 1px solid #888;
+                background: #888;
+                color: #fff;
+                font-size: 12px;
+                padding: 5px;
+                width: 50px;
+                height: 27px;
+                overflow: hidden;
+                vertical-align: middle
+            }
+
+            #SEARCH .button {
+                float: right
+            }
+
+            #SEARCH label {
+                vertical-align: middle
+            }
+
+            #SEARCH .text:focus, .SEARCH .text:focus, .SEARCH .text:focus ~ select {
+                border-color: #4285f4
+            }
+
+                #SEARCH .text:focus ~ .button, #SEARCH .text:focus ~ span .button, .SEARCH .text:focus ~ .button, .SEARCH select:focus ~ .button {
+                    background-color: #4285f4;
+                    border-color: #4285f4
+                }
+
+        #CONTENT {
+            float: left;
+            overflow: hidden;
+            width: 940px;
+            line-height: 1.5
+        }
+
+            #CONTENT .CONTENT {
+                margin: 10px
+            }
+
+        #FOOTER {
+            clear: both;
+            width: 1260px;
+            margin: 50px auto 0;
+            padding: 1em 0;
+            font-size: 12px;
+            line-height: 1.5;
+            border-top: 1px solid #ccc;
+            color: #666
+        }
+
+            #FOOTER a {
+                color: #666;
+                text-decoration: underline
+            }
+
+                #FOOTER a:hover {
+                    color: #000
+                }
+
+            #FOOTER .RSS {
+                background: url(../pliki/-.png?3) no-repeat -191px -27px;
+                padding: 1px 0 1px 18px;
+                margin-left: 1ex;
+                text-decoration: none
+            }
+
+        #FACEBOOK {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            text-align: right
+        }
+
+            #FACEBOOK .facebook_button:link, #FACEBOOK .facebook_button:visited, #FACEBOOK .facebook_button:hover {
+                display: block;
+                width: 32px;
+                height: 32px;
+                float: right;
+                outline: 0;
+                text-align: left;
+                text-indent: -9999px;
+                background: url(../pliki/-.png?3) no-repeat 0 -53px
+            }
+
+        @media only all and (max-width:1280px) {
+            #HEADER h1 a {
+                margin-left: 0
+            }
+
+            #MAIN_MENU dt#kategoria_html {
+                right: 410px
+            }
+
+            #MAIN_MENU dt#kategoria_css {
+                right: 310px
+            }
+
+            #MAIN_MENU dt#kategoria_js {
+                right: 210px
+            }
+
+            #MAIN_MENU dt#kategoria_skrypty {
+                right: 110px
+            }
+
+            #MAIN_MENU dt#kategoria_info {
+                right: 10px
+            }
+        }
+
+        @media only all and (max-width:1279px) {
+            #MAIN, #HEADER ul, #FOOTER {
+                width: 1004px
+            }
+
+            #HEADER li a {
+                padding-left: 6px;
+                padding-right: 6px
+            }
+
+            #MAIN_MENU dt {
+                width: 83px
+            }
+
+                #MAIN_MENU dt#kategoria_html {
+                    right: 370px
+                }
+
+                #MAIN_MENU dt#kategoria_css {
+                    right: 280px
+                }
+
+                #MAIN_MENU dt#kategoria_js {
+                    right: 190px
+                }
+
+                #MAIN_MENU dt#kategoria_skrypty {
+                    right: 100px
+                }
+
+            #CONTENT {
+                width: 674px;
+                font-size: 15px
+            }
+
+            .google {
+                left: 30%;
+                width: 150px
+            }
+        }
+
+        @media only all and (max-width:1023px) {
+            #MAIN, #HEADER ul, #FOOTER {
+                width: 780px
+            }
+
+            #HEADER li a {
+                padding-left: 5px;
+                padding-right: 5px
+            }
+
+            #MENU {
+                width: 200px;
+                font-size: 15px
+            }
+
+            #SEARCH .text {
+                width: 116px
+            }
+
+            #CONTENT {
+                width: 560px
+            }
+
+            .google {
+                display: none
+            }
+        }
+
+        @media only all and (max-width:799px) {
+            .PAG_NAV li {
+                display: block
+            }
+
+            #TOP, #MAIN_MENU, .CONTENT h2, .CONTENT h3, .CONTENT h4 {
+                padding-top: 0;
+                margin-top: 0
+            }
+
+            .CONTENT h1 {
+                text-transform: none
+            }
+
+            .CONTENT h2, .CONTENT h3, .CONTENT h4 {
+                margin-top: 1em
+            }
+
+            #MAIN, #MENU, #CONTENT {
+                overflow: visible
+            }
+
+            #MAIN, #HEADER ul, #MENU, #CONTENT, #FOOTER {
+                clear: both;
+                float: none;
+                width: auto;
+                margin-left: 0;
+                margin-right: 0
+            }
+
+            #HEADER h1 {
+                position: static;
+                height: auto;
+                box-shadow: none;
+                padding-top: 0;
+                padding-bottom: 5px
+            }
+
+            #HEADER ul {
+                font-size: 14px;
+                height: 30px;
+                margin-top: 0
+            }
+
+            #HEADER li a {
+                padding: 5px
+            }
+
+            #HEADER .nav_start a {
+                background-position: -38px -49px
+            }
+
+            #MAIN_MENU {
+                position: absolute;
+                top: 50px;
+                right: 0;
+                z-index: 100;
+                width: 240px;
+                background: #fff;
+                box-shadow: 0 0 10px 0 #999
+            }
+
+                #MAIN_MENU:before {
+                    display: block;
+                    content: url(../pliki/menu.png);
+                    padding: 9px;
+                    position: absolute;
+                    top: -50px;
+                    right: 0
+                }
+
+                #MAIN_MENU:hover:before {
+                    content: "";
+                    width: 222px;
+                    height: 32px;
+                    background: #333
+                }
+
+                #MAIN_MENU dt, #MAIN_MENU dd {
+                    position: absolute;
+                    top: -9999px
+                }
+
+                #MAIN_MENU:hover dt, #MAIN_MENU:hover dd {
+                    position: static
+                }
+
+                #MAIN_MENU dt {
+                    font-size: 16px;
+                    padding: 10px;
+                    margin: 0;
+                    height: auto;
+                    width: 218px;
+                    border-radius: 0
+                }
+
+                    #MAIN_MENU dt:hover {
+                        opacity: 1
+                    }
+
+                #MAIN_MENU dd {
+                    margin: 0;
+                    width: 200px;
+                    line-height: 1.5
+                }
+
+            #INFO {
+                display: none
+            }
+
+            #CONTENT {
+                font-size: 16px
+            }
+
+            #FOOTER {
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: center
+            }
+
+            .PAG_NAV .PRINT, #FACEBOOK, .addthis_toolbox {
+                display: none
+            }
+
+            .generator th.col {
+                width: 100px
+            }
+        }
+
+        @media only all and (max-width:359px) {
+            #HEADER h1 a {
+                width: 170px
+            }
+
+            #HEADER h1 strong {
+                font-size: 20px
+            }
+        }
+    </style>
+    <link rel="License" href="../info/copyright.html">
+    <link rel="Contents" href="../info/sitemap.html">
+    <link rel="Shortcut icon" href="../pliki/favicon.ico?3">
+    <link rel="Alternate" type="application/rss+xml" href="../rss/rss.php?id=1" title="Kurs HTML - darmowe szkolenie: tworzenie stron internetowych">
+    <meta name="title" content="Wczytywanie strony do ramki lokalnej - Ramki">
+    <link rel="image_src" href="../logo/html/2.png">
+    <title>Wczytywanie strony do ramki lokalnej - Ramki - Kurs HTML</title>
+    <script>
+        try { top.location.href } catch (e$$12) { top.location.href = self.location.href } function okno(a, b, c, e) { a = window.open("string" == typeof a ? a : a.href, "undefined" == typeof b ? "" : b, "menubar=no,toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=yes" + ("undefined" != typeof c ? ",width=" + c : "") + ("undefined" != typeof e ? ",height=" + e : "")); if (!a) return !1; a.focus(); return !0 }
+        function aTarget(a, b) { var c = window.open("string" == typeof a ? a : a.href, "undefined" != typeof b ? b : "", "menubar=yes,toolbar=yes,location=yes,directories=no,status=yes,scrollbars=yes,resizable=yes"); if (!c) return !1; c.focus(); return !0 } Array.prototype.random = function (a) { "undefined" == typeof a || 0 > a ? a = 1 : a || (a = this.length); for (var b = 0, c = [], e = this.length; b < a && 0 < e; b++) { do var d = Math.random(); while (1 == d); d = Math.floor(d * e); c.push(this[d]); this[d] = this[--e] } return c };
+        function MainMenu(a) {
+            function b(l) {
+                for (var d = !0, h = l; h;) {
+                    var k = h.nodeName.toLowerCase(); "dt" == k && (l = h, d = !0); if (("dt" == k || "dd" == k) && h.getElementsByTagName("a").length && h.getElementsByTagName("a")[0].href && unescape(h.getElementsByTagName("a")[0].href.replace("/index.html", "/")) == e) {
+                    h.className = (h.className ? h.className + " " : "") + "active"; l._displayed = !0; c(l); for (var d = !1, f = h.parentNode; f != document.getElementById(a);) {
+                        if ("dd" == f.nodeName.toLowerCase()) for (var g = f.previousSibling; g;) {
+                            if ("dt" == g.nodeName.toLowerCase()) {
+                            g._displayed =
+                                !0; c(g); break
+                            } g = g.previousSibling
+                        } f = f.parentNode
+                    }
+                    } "dd" == k && (d && (h.style.display = "none"), b(h.getElementsByTagName("dt")[0])); h = h.nextSibling
+                }
+            } function c(a) { for (var b = 0, c = a._displayed ? "block" : "none"; b < a._dd.length; b++)a._dd[b].style.display != c && (a._dd[b].style.display = c) } for (var e = unescape(window.location.href).replace(/\/[^,\/.]*,/, "/").replace(/\.html.+$/, ".html").replace("/index.html", "/"), d = 0; d < document.getElementById(a).getElementsByTagName("dt").length; d++) {
+                for (var f = [], g = document.getElementById(a).getElementsByTagName("dt")[d].nextSibling,
+                    k; g && "dt" != (k = g.nodeName.toLowerCase());)"dd" == k && (g._dt = document.getElementById(a).getElementsByTagName("dt")[d], f[f.length] = g), g = g.nextSibling; document.getElementById(a).getElementsByTagName("dt")[d]._dd = f; document.getElementById(a).getElementsByTagName("dt")[d]._displayed = !1; document.getElementById(a).getElementsByTagName("dt")[d].onclick = function () {
+                    window.scrollTo && window.scrollTo(0, document.getElementById(a).offsetTop); if (!this._displayed) {
+                        if (!this._displayed) for (var b = this.parentNode.getElementsByTagName("dt")[0]; b;)"dt" ==
+                            b.nodeName.toLowerCase() && b != this && (b._displayed = !1, c(b)), b = b.nextSibling; this._displayed = !this._displayed; c(this)
+                    } return !1
+                    }
+            } b(document.getElementById(a).getElementsByTagName("dt")[0])
+        }
+        function Skin(a, b, c, e) {
+        this.name = "undefined" != typeof a ? a : "skin"; this.expires = "undefined" != typeof b ? b : 365; this.path = "undefined" != typeof c ? c : "/"; this.message = "undefined" != typeof e ? e : "Wymagana obs\u0142uga cookie"; var d = null, f = null, g = ""; this.init = function () {
+            var a = window.location.search.match(RegExp("[?&]" + this.name + "=([^&]+)")); if (a && 2 == a.length) { var b = this.name, c = this.expires; this.name = "_" + this.name; this.expires = 0; this.set(a[1]); this.name = b; this.expires = c } else b = this.name, this.name = "_" + this.name, this.get(),
+                this.name = b, this.show()
+        }; this.get = function () { if ("" != g) return g; var a = document.cookie.match(RegExp("(^|;\\s*)" + this.name + "=([^;]*)")); a && 3 == a.length && (g = a[2]); return g }; this.set = function (a) { document.cookie = "_" + this.name + "=;path=" + this.path; document.cookie = this.name + "=" + a + (0 < this.expires ? ";expires=" + (new Date((new Date).getTime() + 864E5 * this.expires)).toGMTString() : "") + ";path=" + this.path; g = a; "" != this.message && !navigator.cookieEnabled && window.alert(this.message); this.show() }; this.reset = function () {
+            g = "";
+            document.cookie = "_" + this.name + "=;path=" + this.path; document.cookie = this.name + "=;path=" + this.path; this.show()
+        }; this.show = function () {
+            var a = this.get(); if ("" == a) { if (f && f.parentNode && (f.parentNode.removeChild(f), f = null), d) { var b = document.getElementsByTagName("head")[0]; b.insertBefore(d, b.firstChild) } } else d || (d = document.getElementsByTagName("style")[0]), f || (f = document.createElement("link"), f.setAttribute("rel", "stylesheet"), b = document.getElementsByTagName("head")[0], b.insertBefore(f, b.firstChild)), d && d.parentNode &&
+                d.parentNode.removeChild(d), f.setAttribute("href", a)
+        }; this.init()
+        } var skin = new Skin; function Indeks(a, b) { this.id = a; this.ramka = "undefined" == typeof b ? self : "string" == typeof b ? "_blank" == b ? "" : "_self" == b ? self : "_parent" == b ? parent : "_top" == b ? top : b : b ? b : self; var c = document.cookie.match(RegExp("(^|;\\s*)" + this.id + "=([^;]*)")); c && 3 == c.length && (this.wyszukiwarkaOnline = parseInt(c[2])); if (isNaN(this.wyszukiwarkaOnline) || 0 > this.wyszukiwarkaOnline || 2 < this.wyszukiwarkaOnline) this.wyszukiwarkaOnline = 0 }
+        Indeks.prototype.wstawWyszukiwarke = function (a) { document.write('<form action="' + a.htmlSpecialChars(!0) + '" method="get" onsubmit="' + this.id + '.wyszukaj(this.action, this.elements[0].value); return false"><input type="text" class="text"><input type="submit" value="Szukaj" class="button"></form>') }; Indeks.prototype.wyszukiwarkaOnline = 0;
+        Indeks.prototype.zmienWyszukiwarkeOnline = function (a) { for (var b = 0; 2 > b; b++)document.getElementById(this.id + "__" + b).getElementsByTagName("input")[0].value = document.getElementById(this.id + "__" + this.wyszukiwarkaOnline).getElementsByTagName("input")[0].value, document.getElementById(this.id + "__" + b).style.display = b == a ? "block" : "none"; this.wyszukiwarkaOnline = a; document.cookie = this.id + "=" + this.wyszukiwarkaOnline + ";expires=" + (new Date((new Date).getTime() + 31536E6)).toGMTString() + ";path=/" };
+        Indeks.prototype.wstawWyszukiwarkeOnline = function (a, b) {
+            document.write('<form id="' + this.id + '__0" action="' + a.htmlSpecialChars(!0) + '" method="get" onsubmit="' + this.id + '.wyszukaj(this.action, this.elements[0].value); return false"' + (0 == this.wyszukiwarkaOnline ? "" : ' style="display: none"') + '><input type="text" class="text"><span><input type="submit" value="Szukaj" class="button"></span></form><form id="' + this.id + '__1" action="' + b.htmlSpecialChars(!0) + '" method="get"' + (1 == this.wyszukiwarkaOnline ? "" : ' style="display: none"') +
+                '><input type="text" name="q" class="text"><input type="submit" value="Szukaj" class="button"></form><div><span><input type="radio" id="wyszukiwarka0" name="wyszukiwarka" value="0"' + (0 == this.wyszukiwarkaOnline ? ' checked="checked"' : "") + ' style="vertical-align: middle" onclick="' + this.id + '.zmienWyszukiwarkeOnline(this.value)"><label for="wyszukiwarka0">Indeks</label></span> <span><input type="radio" id="wyszukiwarka1" name="wyszukiwarka" value="1"' + (1 == this.wyszukiwarkaOnline ? ' checked="checked"' : "") +
+                ' style="vertical-align: middle" onclick="' + this.id + '.zmienWyszukiwarkeOnline(this.value)"><label for="wyszukiwarka1">Wyszukiwarka</label></span></div>')
+        }; Indeks.prototype.wyszukaj = function (a, b) { var c = a.match(/#.*/); a = a.replace(/#.*/, "").replace(RegExp("[&?]+" + this.id + "=[^&]*", "g"), ""); 0 <= a.indexOf("&") && 0 > a.indexOf("?") && (a = a.replace(/&/, "?")); this.wyswietl(a + (0 > a.indexOf("?") ? "?" : "&") + this.id + "=" + escape(b) + (c ? c : "")) };
+        Indeks.prototype.wyswietl = function (a) { "undefined" == typeof a && (a = document.forms[this.id].elements.hasla.value); if ("string" == typeof this.ramka) { var b = window.open(a, this.ramka, "menubar=yes,toolbar=yes,location=yes,directories=no,status=yes,scrollbars=yes,resizable=yes"); b ? b.focus() : window.location.href = a } else this.ramka.location.href = a };
+        String.prototype.htmlSpecialChars = function (a) { var b = this.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); "undefined" != typeof a && !a && (b = b.replace(/"/g, "&quot;")); return b };
+        var tpl = {
+            comments: function (a, b) {
+                b || (b = document.getElementById("COMMENTS")); if (b) {
+                    for (var c = '<ul class="artykuly">', e = 0; e < a.length; ++e)c += '<li><div class="artykuly_obrazek"><img src="' + (a[e].user && a[e].user.user_avatar ? a[e].user.user_avatar : "../pliki/news/inne.gif") + '" alt="' + (a[e].user ? a[e].user.username : "Go\u015b\u0107") + '" width="50" height="50"></div><div class="artykuly_opis"><b>' + (a[e].user ? a[e].user.username : "Go\u015b\u0107") + '</b><p><small style="opacity:0.5;filter:alpha(opacity=50)">' + a[e].post_time +
+                        "</small><br>" + a[e].post_text.replace(/\n/g, "<br>") + '<br><a href="' + a[e].uri + '" style="border:0;text-decoration:none;background:none;padding:0"><small>Zobacz&nbsp;wi\u0119cej</small></a></p></div></li>'; document.getElementById("COMMENTS").innerHTML = c + "</ul>"
+                }
+            }
+        };</script>
+    <link rel="Start" href=".././index.html" title="Kurs HTML">
+    <link rel="Prev" href="../html/ramki_lokalne,ramki.html" title="Ramki lokalne">
+    <link rel="Next" href="../html/ostrzezenie_przed_ramka,ramki.html" title="Ostrzeżenie przed ramką">
+</head>
+<body>
+    <p id="skip_to_content" class="niedrukuj"><a href="#CONTENT">Przejdź do treści</a></p><div id="TOP">
+        <div id="BODY">
+            <form action="http://www.google.pl/cse" method="get" class="google niedrukuj">
+                <div>
+                    <input type="text" name="q" class="google_input">
+                    <input type="image" src="//www.google.com/uds/css/v2/search_box_icon.png" alt="Szukaj" title="Szukaj" class="google_button">
+                    <input type="hidden" name="cx" value="partner-pub-1502058193960015:7535805186">
+                </div>
+            </form><div id="HEADER"><h1><a href=".././index.html"><strong>Kurs HTML i CSS</strong><b> - darmowe szkolenie: tworzenie stron internetowych</b></a></h1><ul><li class="nav_start"><a href=".././index.html">START</a></li><li class="nav_html"><a href="../html/zielony.html">Jak zacząć</a></li><li class="nav_html"><a href="../html/dalej.html">Co dalej</a></li><li class="nav_html"><a href="../html/xhtml.html">XHTML</a></li><li class="nav_html nav_item nav_html5"><a href="../html/html5.html">HTML5</a></li><li class="nav_html"><a href="../html/html.html">HTML 4.01</a></li><li class="nav_css"><a href="../css/index.html">Style</a></li><li class="nav_css"><a href="../css/css.html">CSS 2</a></li><li class="nav_css nav_item nav_css3"><a href="../temat.php?q=CSS3">CSS3</a></li><li class="nav_scripts"><a href="../skrypty/index.html">Skrypty</a></li><li class="nav_scripts"><a href="../skrypty/generatory.html">Generatory</a></li><li><a href="../info/faq.html">FAQ</a></li><li><a href="../info/indeks.html">Indeks</a></li><li><a href="../info/przegladarki.html">Przeglądarki</a></li><li><a href="../info/sitemap.html">Mapa</a></li><li><a href="https://www.forumweb.pl/">Forum</a></li><li><a href="../info/dotacje.html">DOTACJE</a></li></ul></div><div id="MAIN">
+                <div id="MENU">
+                    <dl id="MAIN_MENU"><dt id="kategoria_html"><span>HTML</span></dt><dd><a href="../html/zielony.html">HTML dla zielonych</a></dd><dd><a href="../html/body.html">Nagłówek i treść</a></dd><dd><a href="../html/tekst.html">Tekst</a></dd><dd><a href="../html/odsylacze.html">Odsyłacze</a></dd><dd><a href="../html/tabele.html">Tabele</a></dd><dd><a href="../html/multimedia.html">Multimedia</a></dd><dd><a href="../html/ramki.html"><strong>Ramki</strong></a><ul><li><a href="wprowadzenie,ramki.html">W tym rozdziale dowiesz się...</a></li><li><a href="wstep,ramki.html">Wstęp</a></li><li><a href="gotowiec,ramki.html">Gotowiec</a></li><li><a href="znacznik_frameset,ramki.html">Znacznik FRAMESET</a></li><li><a href="znacznik_frame,ramki.html">Znacznik FRAME</a></li><li><a href="znacznik_noframes,ramki.html">Znacznik NOFRAMES</a></li><li><a href="wczytywanie_strony_do_ramki,ramki.html">Wczytywanie strony do ramki</a></li><li><a href="zagniezdzanie_ramek,ramki.html">Zagnieżdżanie ramek</a></li><li><a href="ramki_lokalne,ramki.html">Ramki lokalne</a></li><li><a href="wczytywanie_strony_do_ramki_lokalnej,ramki.html"><strong>Wczytywanie strony do ramki lokalnej</strong></a></li><li><a href="ostrzezenie_przed_ramka,ramki.html">Ostrzeżenie przed ramką</a></li><li><a href="szablon_strony_bez_ramek,ramki.html">Szablon strony bez ramek</a></li><li><a href="quiz,ramki.html">Quiz</a></li></ul></dd><dd><a href="../html/formularze.html">Formularze</a></dd><dd><a href="../html/dalej.html">I co dalej...</a></dd><dd><a href="../html/promocja.html">Promocja strony WWW</a></dd><dd><a href="../html/xhtml.html">XHTML</a></dd><dd><a href="../html/html5.html">HTML5</a></dd><dd><b>Dodatki:</b></dd><dd><a href="../html/kolory.html">Kolory</a></dd><dd><a href="../html/znaki.html">Znaki specjalne</a></dd><dd><a href="../html/jezyki.html">Języki</a></dd><dd><a href="../html/html.html">HTML 4.01</a></dd><dt id="kategoria_css"><span>CSS</span></dt><dd><a href="../css/index.html">Kaskadowe Arkusze Stylów</a></dd><dd><a href="../css/wstawianie.html">Wstawianie stylów</a></dd><dd><b>Selektory:</b></dd><dd><a href="../css/elementy.html">Selektory elementów</a></dd><dd><a href="../css/atrybuty.html">Selektory atrybutów</a></dd><dd><a href="../css/specjalne.html">Selektory specjalne</a></dd><dd><a href="../css/pseudoelementy.html">Selektory pseudoelementów</a></dd><dd><a href="../css/pseudoklasy.html">Selektory pseudoklas</a></dd><dd><b>Własności:</b></dd><dd><a href="../css/czcionki.html">Czcionki</a></dd><dd><a href="../css/tekst.html">Tekst</a></dd><dd><a href="../css/tlo.html">Tło</a></dd><dd><a href="../css/marginesy.html">Marginesy</a></dd><dd><a href="../css/obramowanie.html">Obramowanie</a></dd><dd><a href="../css/wykazy.html">Wykazy</a></dd><dd><a href="../css/rozmiary.html">Rozmiary</a></dd><dd><a href="../css/tabele.html">Tabele</a></dd><dd><a href="../css/pozycjonowanie.html">Pozycjonowanie</a></dd><dd><a href="../css/kursory.html">Kursory</a></dd><dd><a href="../css/drukowanie.html">Drukowanie</a></dd><dd><a href="../css/suwaki.html">Suwaki</a></dd><dd><a href="../css/filtry.html">Filtry</a></dd><dd><a href="../css/kolumny.html">Układ wielokolumnowy</a></dd><dd><a href="../css/elastyczne.html">Układ elastyczny</a></dd><dd><b>Więcej:</b></dd><dd><a href="../css/media.html">Media</a></dd><dd><a href="../css/warunkowe.html">Reguły warunkowe</a></dd><dd><a href="../css/quirks.html">Tryb Quirks</a></dd><dd><a href="../css/menu.html">Menu w CSS</a></dd><dd><a href="../css/szablon.html">Szablon strony na DIV-ach</a></dd><dd><a href="../css/oprawa_graficzna.html">Oprawa graficzna</a></dd><dd><a href="../css/dobre_praktyki.html">Dobre praktyki</a></dd><dd><b>Dodatki:</b></dd><dd><a href="../css/definicje.html">Definicje</a></dd><dd><a href="../css/jednostki.html">Jednostki</a></dd><dd><a href="../css/kolory.html">Kolory</a></dd><dd><a href="../css/selektory.html">Selektory</a></dd><dd><a href="../css/css.html">CSS 2</a></dd><dt id="kategoria_js"><span>JS</span></dt><dd><a href="../js/index.html">Wstęp</a></dd><dd><b>ECMAScript:</b></dd><dd><a href="../js/global.html">Obiekt globalny</a></dd><dd><a href="../js/object.html">Object</a></dd><dd><a href="../js/object-prototype.html">Object.prototype</a></dd><dd><a href="../js/function.html">Function</a></dd><dd><a href="../js/function-prototype.html">Function.prototype</a></dd><dd><a href="../js/array.html">Array</a></dd><dd><a href="../js/array-prototype.html">Array.prototype</a></dd><dd><a href="../js/string.html">String</a></dd><dd><a href="../js/string-prototype.html">String.prototype</a></dd><dd><a href="../js/boolean.html">Boolean</a></dd><dd><a href="../js/boolean-prototype.html">Boolean.prototype</a></dd><dd><a href="../js/number.html">Number</a></dd><dd><a href="../js/number-prototype.html">Number.prototype</a></dd><dd><a href="../js/math.html">Math</a></dd><dd><a href="../js/date.html">Date</a></dd><dd><a href="../js/date-prototype.html">Date.prototype</a></dd><dd><a href="../js/regexp.html">RegExp</a></dd><dd><a href="../js/regexp-prototype.html">RegExp.prototype</a></dd><dd><a href="../js/error.html">Error</a></dd><dd><a href="../js/error-prototype.html">Error.prototype</a></dd><dd><a href="../js/json.html">JSON</a></dd><dt id="kategoria_skrypty"><span>Skrypty</span></dt><dd><a href="../skrypty/index.html">Wykaz skryptów</a></dd><dd><a href="../skrypty/generatory.html">Wykaz generatorów</a></dd><dd><a href="../skrypty/ulubione_startowa.html">Ulubione i startowa</a></dd><dd><a href="../skrypty/przyciski.html">Aktywne przyciski</a></dd><dd><a href="../skrypty/aktualizacja.html">Aktualizacja</a></dd><dd><a href="../skrypty/okno.html">Nowe okno</a></dd><dd><a href="../skrypty/galeria.html">Galeria zdjęć</a></dd><dd><a href="../skrypty/przegladarka.html">Przeglądarka zdjęć</a></dd><dd><a href="../skrypty/losowy.html">Losowy element</a></dd><dd><a href="../skrypty/blokada.html">Ochrona strony</a></dd><dd><a href="../skrypty/migotanie.html">Migotanie</a></dd><dd><a href="../skrypty/autoiframe.html">AutoIFRAME</a></dd><dd><a href="../skrypty/wyszukiwarka.html">Wyszukiwarka</a></dd><dd><a href="../skrypty/indeks.html">Indeks, wyszukiwarka</a></dd><dd><a href="../skrypty/rozwijane_menu.html">Rozwijane menu</a></dd><dd><a href="../skrypty/menu_rozwijane.html">Menu rozwijane, otwierane, wysuwane</a></dd><dd><a href="../skrypty/menu_drzewiaste.html">Menu drzewiaste</a></dd><dd><a href="../skrypty/skorki.html">Skórki</a></dd><dd><b>Inne:</b></dd><dd><a href="../ip/">IP tester</a></dd><dt id="kategoria_info"><span>Informacje</span></dt><dd><a href="../info/copyright.html">Prawa autorskie</a></dd><dd><a href="../info/przegladarki.html">Czy mogę używać...</a></dd><dd><a href="../info/sitemap.html">Mapa serwisu</a></dd><dd><a href="../info/indeks.html">Indeks haseł</a></dd><dd><a href="../info/faq.html">FAQ - często zadawane pytania</a></dd><dd><a href="../temat.php">Popularne tematy</a></dd><dd><a href="javascript:void(okno('../quiz/index.html', 'quiz'))">Quiz</a></dd><dd><a href="../skin/">Zmień skórkę</a></dd><dd><a href="../info/kontakt.html">Kontakt</a></dd><dd><a href="../info/dotacje.html">Dotacje</a></dd><dd><a href="../info/autor.html">Autor</a></dd><dd><a href="../info/wyroznienia.html">Wyróżnienia</a></dd><dd><a href="../ksiega/">Księga gości</a></dd><dd><a href="https://www.forumweb.pl/">Forum dyskusyjne</a></dd><dd><a href="https://www.forumweb.pl/porady-i-tutoriale-www,18">Porady i tutoriale WWW</a></dd><dd><a href="https://www.forumweb.pl/gielda-webmastera,16">Giełda webmastera</a></dd><dd><a href="../info/linki.html">Linki</a></dd><dd><a href="../info/reklama.html">Zareklamuj się tutaj za darmo</a></dd><dd><a href="../info/polityka-prywatnosci.html">Polityka prywatności</a></dd></dl><div id="INFO">
+                        <div class="reklama"><a href="http://www.boo.pl/?platnosci,rejestruj,1&amp;ref=logeen" onclick="return !aTarget(this)" class="BOO" title="Konto WWW za 1 SMS">boo.pl - konto WWW za 1 SMS</a></div>
+                        <script>
+                            new MainMenu('MAIN_MENU', '', false, false, 0, 0);
+                            document.write('<div id="SEARCH">');
+                            var SZUKAJ = new Indeks('SZUKAJ');
+                            SZUKAJ.wstawWyszukiwarkeOnline('../info/indeks.html', '../szukaj.php');
+                            document.write('</div>');</script><div class="box"><div class="header"><a href="http://www.kurshtml.edu.pl/info/dotacje.html">Dotacje</a></div><div><ul><li class="row1">Pomogła Ci ta strona? Chcesz, aby dalej się rozwijała?<br><a href="http://www.kurshtml.edu.pl/info/dotacje.html"><b>Wpłać dobrowolną dotację...</b></a>.</li></ul></div></div><noscript>
+                            <div class="SEARCH">
+                                <form action="../szukaj.php" method="get">
+                                    <div>
+                                        <div><strong>Wyszukiwarka:</strong></div><input type="text" name="q" class="text">
+                                        <input type="submit" value="Szukaj" class="button">
+                                    </div>
+                                </form>
+                            </div>
+                        </noscript>
+                        <script>document.write('<div class="box"><div class="header"><a href="../info/faq.html">Porady</a></div><div id="FAQ"></div></div>');</script><div class="box"><div class="header"><a href="../info/linki.html">Polecane strony</a></div><ul><li class="row1"><a href="http://www.interday.pl" title="projektowanie stron, tworzenie stron">Agencja Interaktywna</a></li><li class="row2"><a href="http://szablony.blogowicz.info">Darmowe szablony</a></li><li class="row1"><a href="http://www.dzien-e-mail.org">Dzień e-mail</a></li><li class="row2"><a href="http://www.ekabaret.pl" title="Śmieszne kabarety">Kabarety</a></li><li class="row1"><a href="http://inskyrim.pl" title="Skyrim">Skyrim</a></li><li class="row2"><a href="http://www.pajaczek.pl" title="Polski edytor stron www do tworzenia i publikowania FTP rozbudowanych projektów WWW w html, php, css, mysql, JavaScript">Pajączek - edytor HTML, PHP, CSS z kolorowaniem i szablonami</a></li><li class="row1"><a href="../info/linki.html" title="Linki"><small>Zobacz więcej...</small></a><br><a href="../info/reklama.html" title="Reklama"><small>Dodaj tutaj swoją stronę za darmo...</small></a></li></ul></div>
+                    </div>
+                </div><div id="CONTENT">
+                    <div class="CONTENT">
+                        <h1>Ramki</h1><h2 id="wczytywanie_strony_do_ramki_lokalnej" title="Co zrobić, aby strony z menu wczytywały się do ramki umieszczonej bezpośrednio w treści?">Wczytywanie strony do ramki lokalnej</h2><pre class="skladnia">&lt;a target="<var>nazwa ramki lokalnej</var>" href="<var>tu podaj ścieżkę dostępu do strony</var>"&gt;<var>opis</var>&lt;/a&gt;</pre><div class="parametry">gdzie zamiast tekstu "<var>Tu podaj ścieżkę dostępu do strony</var>" należy podać <a href="wstawienie_obrazka,zielony.html">lokalizację</a> na dysku, gdzie znajduje się strona, do której chcemy się przenieść.<br>Natomiast jako "<var>nazwa ramki lokalnej</var>" należy wpisać nazwę, zdefiniowaną wcześniej w <a href="ramki_lokalne,ramki.html">znaczniku&nbsp;IFRAME</a>.</div><p>Dzięki tej komendzie dostajemy możliwość wczytywania stron do określonych ramek lokalnych na naszej stronie. Przez to treść w takiej ramce (okienku) może się zmieniać, nawet już po wczytaniu strony.</p><p>Aby załadować strony do dwóch (lub więcej) ramek lokalnych jednocześnie, po kliknięciu pojedynczego odsyłacza, zobacz: <a href="wczytywanie_strony_do_ramki,ramki.html">Wczytanie&nbsp;stron&nbsp;do&nbsp;dwóch&nbsp;ramek</a>.</p><div class="niedrukuj"><p class="przyklad">Przykład:</p><p><a href="../przyklady/html/iframe.html#target" onclick="return !aTarget(this, 'przyklad')">Przykład</a></p></div><h3 id="wczytywanie_strony_do_obiektu">Wczytywanie strony do obiektu</h3><p>Aby wczytać nowy dokument do elementu <a href="object,html.html">OBJECT</a> trzeba wykorzystać skrypt. Wklej w nagłówku dokumentu (w ramach <a href="ramy_dokumentu,zielony.html">HEAD</a>) następujący kod:</p><pre class="kod">&lt;script&gt;
+/**
+ * @author Sławomir Kokłowski {@link http://www.kurshtml.edu.pl}
+ * @copyright NIE usuwaj tego komentarza! (Do NOT remove this comment!)
+ */
+
+function target_ob(id, a)
+{
+	if (document.getElementById && document.getElementById(id) && document.getElementById(id).innerHTML)
+	{
+		var ob = document.getElementById(id).innerHTML;
+		if (ob.toLowerCase().indexOf(' data=') != -1)
+		{
+			var start = ob.toLowerCase().indexOf(' data=');
+			var stop = ob.indexOf('"', start+3);
+			if (stop == -1 || ob.indexOf('>', start+3) < stop || ob.indexOf('=', start+3) < stop) stop = ob.indexOf(' ', start+3);
+			if (stop == -1 || stop > ob.indexOf('>', start+3)) stop = ob.indexOf('>', start+3);
+
+			var minus = -1;
+			if ((minus = ob.toLowerCase().indexOf(' width="-')) != -1 || (minus = ob.toLowerCase().indexOf(' width=\'-')) != -1 || (minus = ob.toLowerCase().indexOf(' width=-')) != -1)
+			{
+				for (var i = minus+8; i < ob.length; i++)
+				{
+				 if ((ob.charAt(i) < '0' || ob.charAt(i) > '9') && ob.charAt(i) != '-') break;
+				}
+				ob = ob.substring(0, minus+7+(ob.toLowerCase().indexOf(' width="-') != -1 || ob.toLowerCase().indexOf(' width=\'-') != -1 ? 1 : 0)) + ob.substring(minus+8+(ob.toLowerCase().indexOf(' width="-') != -1|| ob.toLowerCase().indexOf(' width=\'-') != -1 ? 1 : 0), i) + '%' + ob.substring(i);
+			}
+			var minus = -1;
+			if ((minus = ob.toLowerCase().indexOf(' height="-')) != -1 || (minus = ob.toLowerCase().indexOf(' height=-')) != -1)
+			{
+				for (var i = minus+8; i < ob.length; i++)
+				{
+					if ((ob.charAt(i) < '0' || ob.charAt(i) > '9') && ob.charAt(i) != '-') break;
+				}
+				ob = ob.substring(0, minus+8+(ob.toLowerCase().indexOf(' height="-') != -1|| ob.toLowerCase().indexOf(' height=\'-') != -1 ? 1 : 0)) + ob.substring(minus+9+(ob.toLowerCase().indexOf(' height="-') != -1|| ob.toLowerCase().indexOf(' height=\'-') != -1 ? 1 : 0), i) + '%' + ob.substring(i);
+			}
+
+			if (stop > start) document.getElementById(id).innerHTML = ob.substring(0, start) + ' data="' + (a.href ? a.href : a) + '"' + ob.substring(stop);
+			else return true;
+		}
+	}
+	else return true;
+
+	return false;
+}
+&lt;/script&gt;</pre><p>Sam obiekt należy ująć w znaczniki <code>&lt;div id="nazwa"&gt;...&lt;/div&gt;</code>:</p><pre class="html">&lt;<a href="div,html.html">div</a> id="<b>nazwa</b>"&gt;&lt;<a href="object,html.html">object</a> data="<var>ścieżka dostępu</var>" type="text/html" width="<var>x</var>" height="<var>y</var>"&gt;...&lt;/<a href="object,html.html">object</a>&gt;&lt;/<a href="div,html.html">div</a>&gt;</pre><p>Teraz wczytywanie nowych stron do takiego obiektu będzie się odbywało w następujący sposób:</p><pre class="html">&lt;<a href="a,html.html">a</a> href="<var>strona.html</var>" onclick="return target_ob('<b>nazwa</b>', this)"&gt;...&lt;/<a href="a,html.html">a</a>&gt;</pre><p class="przyklad">Przykład:</p>
+                        <script>
+                            /**
+                            * @author Sławomir Kokłowski {@link http://www.kurshtml.edu.pl}
+                            * @copyright NIE usuwaj tego komentarza! (Do NOT remove this comment!)
+                            */
+                            function target_ob(id, a) {
+                                if (document.getElementById && document.getElementById(id) && document.getElementById(id).innerHTML) {
+                                    var ob = document.getElementById(id).innerHTML;
+                                    if (ob.toLowerCase().indexOf(' data=') != -1) {
+                                        var start = ob.toLowerCase().indexOf(' data=');
+                                        var stop = ob.indexOf('"', start + 3);
+                                        if (stop == -1 || ob.indexOf('>', start + 3) < stop || ob.indexOf('=', start + 3) < stop) stop = ob.indexOf(' ', start + 3);
+                                        if (stop == -1 || stop > ob.indexOf('>', start + 3)) stop = ob.indexOf('>', start + 3);
+                                        var minus = -1;
+                                        if ((minus = ob.toLowerCase().indexOf(' width="-')) != -1 || (minus = ob.toLowerCase().indexOf(' width=\'-')) != -1 || (minus = ob.toLowerCase().indexOf(' width=-')) != -1) {
+                                            for (var i = minus + 8; i < ob.length; i++) {
+                                                if ((ob.charAt(i) < '0' || ob.charAt(i) > '9') && ob.charAt(i) != '-') break;
+                                            }
+                                            ob = ob.substring(0, minus + 7 + (ob.toLowerCase().indexOf(' width="-') != -1 || ob.toLowerCase().indexOf(' width=\'-') != -1 ? 1 : 0)) + ob.substring(minus + 8 + (ob.toLowerCase().indexOf(' width="-') != -1 || ob.toLowerCase().indexOf(' width=\'-') != -1 ? 1 : 0), i) + '%' + ob.substring(i);
+                                        }
+                                        var minus = -1;
+                                        if ((minus = ob.toLowerCase().indexOf(' height="-')) != -1 || (minus = ob.toLowerCase().indexOf(' height=-')) != -1) {
+                                            for (var i = minus + 8; i < ob.length; i++) {
+                                                if ((ob.charAt(i) < '0' || ob.charAt(i) > '9') && ob.charAt(i) != '-') break;
+                                            }
+                                            ob = ob.substring(0, minus + 8 + (ob.toLowerCase().indexOf(' height="-') != -1 || ob.toLowerCase().indexOf(' height=\'-') != -1 ? 1 : 0)) + ob.substring(minus + 9 + (ob.toLowerCase().indexOf(' height="-') != -1 || ob.toLowerCase().indexOf(' height=\'-') != -1 ? 1 : 0), i) + '%' + ob.substring(i);
+                                        }
+                                        if (stop > start) document.getElementById(id).innerHTML = ob.substring(0, start) + ' data="' + (a.href ? a.href : a) + '"' + ob.substring(stop);
+                                        else return true;
+                                    }
+                                }
+                                else return true;
+                                return false;
+                            }</script><div style="text-align: center">
+                            <div id="nazwa"><object data="../przyklady/html/test.html" type="text/html" width="70%" height="250">...</object></div><br><br>
+                            <a href="../przyklady/html/test.html" onclick="return target_ob('nazwa', this)">Przykład&nbsp;1</a>&nbsp;&nbsp;&nbsp;
+                            <a href="../przyklady/html/banner.html" onclick="return target_ob('nazwa', this)">Przykład&nbsp;2</a>&nbsp;&nbsp;&nbsp;
+                            <a href="../przyklady/html/transition.html" onclick="return target_ob('nazwa', this)">Przykład&nbsp;3</a>&nbsp;&nbsp;&nbsp;
+                        </div><ul class="NAV"><li class="PREV"><a href="../html/ramki_lokalne,ramki.html" title="Wstecz">Ramki lokalne</a></li><li class="NEXT"><a href="../html/ostrzezenie_przed_ramka,ramki.html" title="Dalej">Ostrzeżenie przed ramką</a></li></ul><div class="niedrukuj"><h3 id="tematy">Zobacz także</h3><ul class="artykuly"><li><div class="artykuly_obrazek"><a href="../html/wstep,ramki.html"><img src="../pliki/news/html.gif" alt="html"></a></div><div class="artykuly_opis"><a class="img" href="../html/wstep,ramki.html">Ramki&nbsp;/ Wstęp</a><p>Jak stworzyć stronę WWW, podzieloną na klika ramek, czyli okienek?</p></div></li><li><div class="artykuly_obrazek"><a href="../html/gotowiec,ramki.html"><img src="../pliki/news/html.gif" alt="html"></a></div><div class="artykuly_opis"><a class="img" href="../html/gotowiec,ramki.html">Ramki&nbsp;/ Gotowiec</a><p>Gotowe przykłady stron WWW z ramkami?</p></div></li><li><div class="artykuly_obrazek"><a href="../html/znacznik_frameset,ramki.html"><img src="../pliki/news/html.gif" alt="html"></a></div><div class="artykuly_opis"><a class="img" href="../html/znacznik_frameset,ramki.html">Ramki&nbsp;/ Znacznik FRAMESET</a><p>Jak zdefiniować wygląd strony z ramkami, ustalając ich rozmiary, położenie i dodatkowe atrybuty?</p></div></li></ul></div><div class="niedrukuj">
+                            <h3 id="komentarze">Komentarze</h3><form action="https://www.forumweb.pl/posting.php" method="get" accept-charset="iso-8859-2">
+                                <div>
+                                    <input type="hidden" name="mode" value="reply">
+                                    <input type="hidden" name="t" value="69530">
+                                    <input type="hidden" name="subject" value="Wczytywanie strony do ramki lokalnej"><p><input type="submit" value="Dodaj nowy komentarz"></p>
+                                </div>
+                            </form><div id="COMMENTS"></div>
+                            <script>
+                                var now = new Date();
+                                now = Math.round(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds()) / 1000);
+                                document.write('<script async defer src="../comments/html/ramki.js?' + (now - now % 600) + '"><' + '/script>');</script><p class="zobacz"><a href="https://www.forumweb.pl/viewtopic.php?t=69530">Zobacz więcej komentarzy</a></p>
+                        </div><ul class="PAG_NAV"><li class="TOP"><a href="#TOP">Do&nbsp;góry</a></li><li class="HOME"><a href=".././index.html">Strona&nbsp;główna</a></li><li class="PRINT"><a href="ramki.print.html">Drukuj&nbsp;rozdział</a></li></ul>
+                    </div>
+                </div>
+            </div><div id="FOOTER"><strong>&copy; 2002-2019 <a href="../info/kontakt.html">Sławomir&nbsp;Kokłowski</a></strong> <a href="../rss/?a=channel&amp;id=1" class="RSS" title="Subskrybuj nowości">RSS</a><div class="COPYRIGHT">Kopiowanie treści bez zgody autora zabronione (<a href="../info/copyright.html">zasady&nbsp;korzystania</a>)!</div><div><a href="../info/polityka-prywatnosci.html" rel="nofollow">Polityka&nbsp;prywatności</a>. Strona sponsorowana przez serwis <a href="http://www.boo.pl">www.boo.pl</a></div></div>
+        </div>
+    </div><div id="FACEBOOK" class="niedrukuj"></div>
+    <script async defer src="../pliki/foot.min.js?1544898636"></script>
+    <script async defer src="../faq.js.php?b=..%2F&amp;c=html"></script>
+    <script>var link = document.createElement("link"); link.rel = "Stylesheet"; link.media = "only x"; link.href = "../pliki/print.min.css?1544729482"; document.getElementsByTagName('head')[0].appendChild(link); setTimeout(function () { link.media = "print"; }, 0);</script>
+</body>
+</html>

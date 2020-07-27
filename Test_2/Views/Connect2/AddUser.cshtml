@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>AddUser</h2>
+<form action="/Connect/Zadanie" method="post">
+    <fieldset>
+        <legend>
+            Zadania
+        </legend>
+        <div class="edit_label">zadanie</div>
+        <div class="=" editor-field">
+            <input name="key_2" value="key_2" />
+        </div>
+        <p><input type="submit" value="Wyslij" /></p>
+    </fieldset>
+    </form>
+    <h2>------------------</h2>
+    @ViewBag.news
+    <h2>------------------</h2>
+    <form action="/Connect/AddUser" method="post">
+        <fieldset>
+            <legend>
+                Dodaj Uzytkownika
+            </legend>
+            <div class="edit_label">Nazwa uzytkownika : </div>
+            <div class="=" editor-field">
+                <input name="Name" value="Nazwa uzytkownika : " />
+            </div>
+
+            <div class="edit_label">Haslo dostepowe</div>
+            <div class="=" editor-field">
+                <input name="Key" value="Haslo dostepowe" />
+            </div>
+
+            <div class="edit_label">Haslo_root</div>
+            <div class="=" editor-field">
+                <input name="Key_root" value="Haslo_root" />
+            </div>
+
+            <p><input type="submit" value="Create" /></p>
+        </fieldset>
+</form>

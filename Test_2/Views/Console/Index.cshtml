@@ -1,0 +1,62 @@
+﻿@model Test_2.Models.Consoles
+@{
+    ViewBag.Title = "Index";
+}
+
+@RenderPage("~/Views/Komunikat.cshtml")
+
+@{
+    string temps = "";
+}
+
+
+<div style="text-align: center">
+    <table class="TableMain">
+        <thead>
+            <tr>
+                <th>Wiersz poleceń</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr>
+                @{
+                    temps = ViewBag.temp;
+                }
+                <td style="height:100px; padding:10px; text-align:left;">
+                    @{
+                        List<int> poczatek = new List<int>();
+
+                        try
+                        {
+
+                            List<string> comandss = (List<string>)Session["tablica_komend"];
+
+                           
+                            for (int i = 0; i < comandss.Count; i++)
+                            {
+                                <div class="FontMachine">@comandss[i]</div>
+                            }
+                        }
+                        catch
+                        {
+                            Session["ViewBag_success"] = "Polecenie zostało wykonae poprawnie";
+                        }
+                    }
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <input style="background-color:rgba(39, 39, 39, 0.98); color:#D1D1D1;  border-color:rgba(25, 24, 24, 0.95);" id="In_" name="In_" type="text" value="" class="btn btn-default" />
+                        <input style="background-color:#111111; color:#D1D1D1;  border-color:#191818; width:50px;" type="submit" value="Run" class="btn btn-default" />
+                    }
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,55 @@
+﻿@model Test_2.Models.ProfileUser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2></h2>
+@RenderPage("~/Views/Komunikat.cshtml");
+<div style="text-align: center">
+    <table class="TableMain" style="margin:auto;">
+        <thead>
+            <tr>
+                <th>Nazwa</th>
+                <th>Wynik</th>
+            </tr>
+        </thead>
+        <tbody>
+            @using Microsoft.AspNet.Identity;
+            @Html.HiddenFor(model => model.ProfilNalezyDo, new { id = "ProfileName", Value = User.Identity.GetUserName().ToString() })
+
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.ProfileName)</td>
+                    <td>@Html.DisplayFor(model => model.ProfileName)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.ProfileIp)</td>
+                    <td>@Html.DisplayFor(model => model.ProfileIp)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.ProfilePort)</td>
+                    <td>@Html.DisplayFor(model => model.ProfilePort)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.ProfileNameUser)</td>
+                    <td>@Html.DisplayFor(model => model.ProfileNameUser)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.ProfileKeyUser)</td>
+                    <td>@Html.DisplayFor(model => model.ProfileKeyUser)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.ProfileKeyRoot)</td>
+                    <td>@Html.DisplayFor(model => model.ProfileKeyRoot)</td>
+
+                </tr>
+            </tbody>
+    </table>
+</div>
+<p style="margin:auto; margin:auto">
+    <br />
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProfileUserId })
+    <br />
+    @Html.ActionLink("Back to List", "IndexAccount")
+    <br />
+</p>

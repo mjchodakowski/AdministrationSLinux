@@ -1,0 +1,732 @@
+﻿@media screen and (min-width: 700px) {
+    #panel, #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+    }
+
+    #panel {
+        padding: 50px;
+        display: none;
+    }
+    /*Home*/
+    .przestrzen{
+        height:50px;
+    }
+    #pp{
+        height:200px;
+    }
+
+    .wrap {
+        display: flex;
+        position: absolute;
+        top: 10%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    .but {
+        background-color: #1d1d1d;
+        border: 4px solid #d3d3d3;
+        border-radius:10px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 35px;
+        letter-spacing: 0.2px;
+        word-spacing: 1px;
+        font-weight: 700;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: uppercase;
+        text-align: center;
+        color: #878787;
+        position: relative;
+        width: 600px;
+        line-height: 20px;
+        display: inline-block;
+        overflow: hidden;
+        height: 100px;
+        padding-top: 5px;
+        padding-top: 35px;
+    }
+
+        .but:before {
+            content: "";
+            background-color: rgba(255,255,255,0.5);
+            height: 102%;
+            width: 50px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -70px;
+            transform: skewX(-45deg) translateX(0px);
+            transition: none;
+        }
+
+        .but:hover {
+            background-color: #111111;
+            color: #ffffff;
+            height: 115px;
+            width: 615px;
+            border: 10px solid #d3d3d3;
+            text-decoration: none;
+        }
+
+            .but:hover:before {
+                transform: skewX(-45deg) translateX(400px);
+                transition: all 0.4s ease-in;
+            }
+
+
+    .Maindemomaintitle {
+
+        position: absolute;
+        z-index: -1;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top:5%;
+        background-color: #111;
+        width: 49%;
+        height: 150px;
+        opacity: 0.95;
+        border: 6px solid #D1D1D1;
+        text-align:center;
+    }
+
+   .TextMain{
+font-family: "Courier New", Courier, monospace;
+        font-size: 50px;
+        letter-spacing: 1.8px;
+        word-spacing: 2px;
+        color: #818181;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+
+    .MainTitle {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 50px;
+        letter-spacing: 1.8px;
+        word-spacing: 2px;
+        color: #818181;
+        font-weight: 700;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: uppercase;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    table.TableMain {
+        margin-top: 80px;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        border: 4px solid #D1D1D1;
+        background-color: #111111;
+        width: 90%;
+        height: 200%;
+        text-align: center;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+    }
+
+    table.TableMainChangeProfile {
+        margin-top: 80px;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        border: 3px solid #D1D1D1;
+        background-color: #111111;
+        width: 30%;
+        text-align: left;
+        border-collapse: collapse;
+        border-radius:10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        table.TableMainChangeProfile td, table.TableMainChangeProfile th, table.TableMainChangeProfile td {
+            border: 1px solid #000000;
+            border-radius: 15px;
+            padding: 8px 8px;
+            text-align: center;
+            margin: 5px;
+        }
+
+
+    table.TableMain td, table.connectionProfile th {
+        border: 1px solid #000000;
+        padding: 3px 10px;
+        text-align: center;
+    }
+
+        table.TableMain tbody td {
+            font-size: 18px;
+            color: #818181;
+            text-align: center;
+            padding: 8px;
+        }
+
+    .BootomMainProfile {
+        background-color: #0f0f0f;
+        color: #969696;
+        border: 1px solid #d1d1d1;
+        font-size: 10px;
+    }
+
+    .TableMain_2 {
+        margin-top: 50px;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        border: 5px solid #D1D1D1;
+        padding:10px;
+        background-color: #111111;
+        width: 20%;
+        text-align: left;
+        border-collapse: collapse;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        color:white;
+    }
+
+    table.TableMain_2 thead th{
+        border-bottom:2px solid #6a69d3;
+    } 
+
+    table.TableMain_2 tbody td {
+        padding: 10px;
+        color: #d3d3d3;
+        text-align: center;
+        border-bottom:1px dashed #D1D1D1;
+        
+    }
+
+    table.TableMain thead {
+        text-align: center;
+        background: #818181;
+        background: -moz-linear-gradient(top, #a0a0a0 0%, #8d8d8d 66%, #818181 100%);
+        background: -webkit-linear-gradient(top, #a0a0a0 0%, #8d8d8d 66%, #818181 100%);
+        background: linear-gradient(to bottom, #a0a0a0 0%, #8d8d8d 66%, #818181 100%);
+        border-bottom: 3px solid #000000;
+    }
+
+            table.TableMain thead tr th {
+                font-size: 20px;
+                font-weight: bold;
+                color: #303030;
+                text-align: center;
+            }
+
+    .MainPicxNoLogon {
+        width: 900px;
+        position: absolute;
+        z-index: -1;
+        margin-top: -4%;
+        margin-left:7%;
+    }
+
+    .exampleModalLongTitle_ {
+        font-size: 30px;
+
+    }
+
+    .closeLogon {
+        margin: 0px;
+        border: none;
+        position: absolute;
+        top: 0%;
+        left: 70%;
+        font-size: 55px;
+        background-color:white;
+    }
+
+    .infoRememberMe {
+        margin-right: 0px;
+        margin-left: auto;
+        text-align: right;
+    }
+
+    .RememberMeCheck {
+        text-align: right;
+        float: none;
+    }
+
+    .RegisterMeM {
+        margin-right: 0px;
+        margin-left: auto;
+        text-align: right;
+    }
+
+    .RegisterMe {
+        font-weight: 900;
+        font-size: 15px;
+        text-align: right;
+        text-decoration: none;
+        color: rgba(17, 17, 17, 0.89);
+        font-family: Georgia, serif;
+    }
+
+    .RememberMeCheck {
+        font-weight: 700;
+        font-size: 15px;
+        text-align: right;
+        text-decoration: none;
+        color: rgba(17, 17, 17, 0.89);
+        transition: 0.3s;
+        font-family: Georgia, serif;
+    }
+
+        .RememberMeCheck:hover, .RegisterMe:hover {
+            text-decoration: none;
+        }
+
+    .bottomLogon {
+        background-color: #111;
+        color: #dedede;
+        border-bottom: 2px,unset,#dedede;
+        border-radius: 5px;
+        transition: 0.3s;
+        font-size: 15px;
+        width: 120px;
+        height: 60px;
+        text-transform: uppercase;
+    }
+
+    button:hover {
+        outline: none;
+        background-color: none;
+    }
+
+    .bottomLogon:hover {
+        font-size: 110%;
+    }
+
+    .avatarLogon {
+        width: 30%;
+        left: 20px;
+        position: absolute;
+        border-radius: 20px;
+    }
+
+    .writetextDivLogon {
+        margin-left: 40%;
+        margin-bottom:0%;
+        margin-top:2%;
+    }
+
+    .inputValuedivLogon {
+        font-family: "Courier New", Courier, monospace;
+        margin-left: 40%;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .writetextLogon {
+        width:80%;
+        text-align:center;
+        font-size:15px;
+        min-height: 10px;
+        border-radius: 5px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .infoLogonCheck, .infoLogonInfo {
+        font-family: Georgia, serif;
+        font-size: 15px;
+    }
+
+    .infoLogonCheck {
+        width: 20px;
+        height: 20px;
+    }
+
+        .infoLogonCheck:hover, .infoLogonInfo:hover {
+            font-family: Georgia, serif;
+        }
+
+    .AlertLogonDiv {
+        position: absolute;
+        opacity: 0.90;
+        opacity: 0.90;
+        z-index: 0;
+        top: 100px;
+        left: 10%;
+    }
+
+    .bottomLogon {
+        background-color: #111;
+        color: #dedede;
+        border-bottom: 2px,unset,#dedede;
+        border-radius: 5px;
+        transition: 0.3s;
+        font-size: 15px;
+        width: 50%;
+        height: 4%;
+        text-transform: uppercase;
+    }
+
+    .alert {
+        position: absolute;
+        opacity: 0.95;
+        z-index: 0;
+        min-width:70%;
+        top: 100px;
+        left: 10%;
+    }
+
+    .MainName {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 12px;
+        letter-spacing: 1px;
+        word-spacing: 0.8px;
+        color: #d3d3d3;
+        font-weight: 400;
+        text-decoration: none;
+        font-style: oblique;
+        font-variant: normal;
+        text-transform: uppercase;
+    }
+
+    .MainNameReturn {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 30px;
+        min-width:300px;
+        color:#1c900a;
+    }
+
+    .testing {
+        color:white;
+    }
+
+    .BootomMainProfile {
+        background-color: #3b3b3b;
+        color: #dedede;
+        border: 1px solid #d1d1d1;
+        font-size: 15px;
+        border-radius: 2px;
+        margin: auto;
+        text-transform: uppercase;
+    }
+
+    .link{
+        margin-bottom:0px;
+        color:beige;
+        text-decoration:none;
+        font-size:10px;
+    }
+    .link:hover{
+        text-decoration:none;
+    }
+
+    .testing_ {
+        color: #3352cb;
+        min-width:500px;
+    }
+
+    .textyDiv {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-right: 5px;
+        min-width: 340px;
+    }
+
+    texty {
+        text-align: center;
+        font-family: Georgia, serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        color: #000000;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+    }
+
+
+
+
+    table.connectionProfileList {
+        margin-top: 8px;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        border: 4px solid #D1D1D1;
+        background-color: #111111;
+        width: 95%;
+        height: 200%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+        table.connectionProfileList td, table.connectionProfileList th {
+            border: 1px solid #000000;
+            padding: 3px 10px;
+            text-align: center;
+        }
+
+        table.connectionProfileList tbody td {
+            font-size: 10px;
+            color: #818181;
+            text-align: center;
+            padding: 8px;
+        }
+
+        table.connectionProfileList td:nth-child(even) {
+            background: #373737;
+        }
+
+        table.connectionProfileList thead {
+            text-align: center;
+            background: #818181;
+            background: -moz-linear-gradient(top, #a0a0a0 0%, #8d8d8d 66%, #818181 100%);
+            background: -webkit-linear-gradient(top, #a0a0a0 0%, #8d8d8d 66%, #818181 100%);
+            background: linear-gradient(to bottom, #a0a0a0 0%, #8d8d8d 66%, #818181 100%);
+            border-bottom: 3px solid #000000;
+        }
+
+            table.connectionProfileList thead th {
+                font-size: 16px;
+                font-weight: bold;
+                color: #303030;
+                text-align: left;
+            }
+
+        table.connectionProfileList tfoot {
+            font-size: 14px;
+            font-weight: bold;
+            color: #111111;
+            background: #000000;
+            background: -moz-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+            background: -webkit-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+            background: linear-gradient(to bottom, #404040 0%, #191919 66%, #000000 100%);
+            border-top: 2px solid #D1D1D1;
+        }
+
+            table.connectionProfileList tfoot td {
+                font-size: 14px;
+            }
+
+            table.connectionProfileList tfoot .links {
+                text-align: right;
+            }
+
+                table.connectionProfileList tfoot .links a {
+                    display: inline-block;
+                    background: #1C214D;
+                    color: #FFFFFF;
+                    padding: 2px 8px;
+                    border-radius: 5px;
+                }
+
+    .connectionProfilePre{
+        max-height:10px;
+        width:60%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .inputSend{
+        float:left;
+    }
+    .FontMachine {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 15px;
+        letter-spacing: -1.2px;
+        word-spacing: -0.6px;
+        color: #B6B6B6;
+        font-weight: 400;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+        margin-bottom:15px;
+    }
+
+    .progress {
+        margin: auto;
+        position: relative;
+        width: 500px;
+        border: 1px solid #ddd;
+        padding: 1px;
+        background-color: #111;
+        display: none;
+    }
+
+    .progress-bar {
+        width: 0px;
+        height: 50px;
+        background-color: #6f6f6f;
+    }
+
+    .rotate_on {
+        display: none;
+    }
+    .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: #404040;
+        opacity: 1;
+        transition: opacity 0.6s;
+        margin-bottom: 15px;
+        max-width:90%;
+    }
+
+        .alert.success {
+            background-color: #4CAF50;
+        }
+
+        .alert.info {
+            background-color: #2196F3;
+        }
+
+        .alert.warning {
+            background-color: #ff9800;
+        }
+    preloader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    #preloader {
+        background: #232526 linear-gradient(to right,#000000,#232526,#808080);
+        opacity: 0.90;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 1s;
+    }
+
+    .dot {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+        border: 4px solid #808080;
+        border-radius: 50%;
+        background-color: #808080;
+        animation: show-hide 1s ease infinite;
+    }
+
+        .dot:nth-child(2) {
+            animation-delay: 150ms
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 300ms
+        }
+
+        .dot:nth-child(4) {
+            animation-delay: 450ms
+        }
+
+        .dot:nth-child(5) {
+            animation-delay: 600ms
+        }
+
+        .dot:nth-child(6) {
+            animation-delay: 750ms
+        }
+
+    @keyframes show-hide {
+        0% {
+            transform: scale(0);
+        }
+
+
+        50% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .textLoading {
+        width: 20%;
+        font-family: Impact, Charcoal, sans-serif;
+        font-size: 55px;
+        letter-spacing: -1.6px;
+        word-spacing: 6px;
+        color: rgb(49, 49, 49);
+        font-weight: 400;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: uppercase;
+        float: none;
+    }
+
+    #preloader.preloader-hiding {
+        opacity: 0;
+    }
+
+
+    #preloader.preloader-hidden {
+        display: none;
+    }
+
+    .installbib {
+        margin-top: 15px;
+        margin-left: 700px;
+        width: 500px;
+    }
+
+    #stopka{
+        width:90%;
+        text-align:center;
+        font-size:20px;
+    }
+
+        #stopka a {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 21px;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            color: #000000;
+            font-weight: 700;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: small-caps;
+            text-transform: none;
+        }
+
+        #stopka b {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 21px;
+            letter-spacing: -2.6px;
+            word-spacing: 2px;
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: normal;
+            text-transform: none;
+        }
+
+        #stopka c {
+            font-family: "Arial Black", Gadget, sans-serif;
+            font-size: 18px;
+            letter-spacing: -1.8px;
+            word-spacing: 6px;
+            color: #FF8888;
+            font-weight: 400;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: normal;
+            text-transform: none;
+        }
+        }
+}

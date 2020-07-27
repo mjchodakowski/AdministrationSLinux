@@ -1,0 +1,144 @@
+﻿@using Microsoft.AspNet.Identity;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System zarządzania systemem LINUX </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/css/login.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/menu.css" type="text/css" />
+    <link rel="stylesheet" href="~/Composition/computer.css" type="text/css" />
+    <link rel="stylesheet" href="~/Composition/mobile.css" type="text/css" />
+    <link rel="stylesheet" href="~/Composition/tablet.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/w3.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/loading.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body style="border-left:1px;" id="element_z_tlem">
+
+    <div id="preloader">
+        <div class="textLoading">OCZEKIWANIE NA SERWER ZDALNY</div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a>@Html.ActionLink("Strona główna", "Index", "Home")</a>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a style="color:honeydew">Podstawowe funkcjonalności</a>
+            <ul>
+                <li>@Html.ActionLink("Strona Główna Profilu", "Index", "UserMainProfile")</li>
+                <li>@Html.ActionLink("Menedżer plików", "About", "ChangeFile")</li>
+                <li>@Html.ActionLink("Edycja Uzytkowników", "Index", "ConfigAccount")</li>
+                <li>@Html.ActionLink("Konsola", "Index", "Console")</li>
+                <li>@Html.ActionLink("Pliki użytkownika", "IndexAccount", "serverFiles")</li>
+            </ul>
+
+            <a style="color:honeydew"> Administracja użytkownika</a>
+            <ul>
+                <li> @Html.ActionLink("Edycja Profili Połączeniowych", "IndexAccount", "ProfileUsers")</li>
+                <li>@Html.ActionLink("Ustawienia konta Uzytkownika", "Index", "Manage")</li>
+            </ul>
+            <div>
+                @if (User.IsInRole("root") || User.IsInRole("admin"))
+                {
+                    <a style="color:honeydew">Administracja root</a>
+                    <ul>
+                        <li>@Html.ActionLink("Konfiguracja profili uzytkownikow", "Index", "ProfileUsers")</li>
+                        <li>@Html.ActionLink("Konfiguracja dostępu do funkcji uzytkowników", "Index", "Role")</li>
+                        <li>@Html.ActionLink("Serwer plików wszystkich użytkowników", "Index", "serverFiles")</li>
+
+                    </ul>
+                }
+            </div>
+            if (User.Identity.IsAuthenticated)
+            {
+                <a style="color:honeydew">Pomoc</a>
+                <ul>
+                    <li>@Html.ActionLink("Tworzenie Profili", "helpProfiles", "Pomoc")</li>
+                    <li>@Html.ActionLink("Menedżer plików", "helpExplorator", "Pomoc")</li>
+                </ul>
+            }
+
+
+
+
+        }
+        <div class="loginPartial " style="">@Html.Partial("_LoginPartial")</div>
+    </div>
+
+
+    <div id="main">
+        @try
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776 Menu</span>
+                    @RenderBody()
+        }
+            else
+            {
+                @RenderBody()
+            }
+        }
+        catch
+        {
+            RenderPage("~/Shared/Error");
+        }
+    </div>
+
+    <footer id="stopka">
+        &copy;  - <a>Chodakowski Michał</a>- -<b> Administracja i zarządzanie systemem LINUX </b>-  - <c>@DateTime.Now</c> -
+    </footer>
+
+    <script>
+        function openNav() {
+                document.getElementById("mySidenav").style.width = "300px";
+                document.getElementById("main").style.marginLeft = "300px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.body.style.backgroundColor = "white";
+            }
+
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+
+        var preloaderEl = document.querySelector('#preloader');
+
+        window.addEventListener('load', function () {
+            preloaderEl.classList.add('preloader-hiding');
+            preloaderEl.addEventListener('transitionend', function () {
+                this.classList.add('preloader-hidden');
+                this.classList.remove('preloader-hiding');
+            })
+        });
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

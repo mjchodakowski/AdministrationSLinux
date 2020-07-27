@@ -1,0 +1,68 @@
+﻿@model Test_2.Models.ProfileUser
+
+@{
+    ViewBag.Title = "Tworzenie nowego Profila Polaczenia";
+}
+@RenderPage("~/Views/Komunikat.cshtml")
+@using (Html.BeginForm())
+{@Html.AntiForgeryToken()
+@Html.ValidationSummary();
+
+<div class="textyDiv">
+    <texty>TWORZENIE NOWEGO PROFILU</texty>
+</div>
+
+@Html.ActionLink("POWRÓT DO LISTY", "Index", null, new { @class = "w3-button w3-grey", @style = "margin:10px;" })
+
+<div style="text-align: center">
+
+    <table class="TableMain">
+
+
+        <tbody>
+
+            <tr>
+                <td>DO PROFILU POSIADA DOSTĘP UŻYTKOWNIK: </td>
+                <td>@Html.EditorFor(model => model.ProfilNalezyDo, new { htmlAttributes = new { @class = "form-control" } })</td>
+            </tr>
+
+            <tr>
+                <td>NAZWA PROFILU</td>
+                <td>@Html.EditorFor(model => model.ProfileName, new { htmlAttributes = new { @class = "form-control" } })</td>
+            </tr>
+
+            <tr>
+                <td>ADRES</td>
+                <td>@Html.EditorFor(model => model.ProfileIp, new { htmlAttributes = new { @class = "form-control" } })</td>
+            </tr>
+
+
+            <tr>
+                <td>PORT</td>
+                <td>@Html.EditorFor(model => model.ProfilePort, new { htmlAttributes = new { @class = "form-control" } })</td>
+            </tr>
+
+
+            <tr>
+                <td>NAZWA UZYTKOWNIKA LOGOWANIA </td>
+                <td>@Html.EditorFor(model => model.ProfileNameUser, new { htmlAttributes = new { @class = "form-control" } })</td>
+            </tr>
+            <tr>
+                <td>HASŁO UŻYTKOWNIKA LOGOWANIA</td>
+                <td>@Html.EditorFor(model => model.ProfileKeyUser, new { htmlAttributes = new { @class = "form-control" } })</td>
+            </tr>
+            <tr>
+                <td>HHASŁO SUPERUSER</td>
+                <td>@Html.EditorFor(model => model.ProfileKeyRoot, new { htmlAttributes = new { @class = "form-control" } }) </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <input type="submit" value="ZAPISZ" class="w3-button w3-blue-grey" style="margin-top:20px;" />
+</div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

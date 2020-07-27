@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Sending";
+}
+
+<h2>Sending</h2>
+
+
+
+<input type="submit" value="OK" />
+
+@ViewBag.file
+@ViewBag.test_2 
+
+<form action="/Connect/Sending" method="post">
+    <fieldset>
+        <legend>
+            Wysylanie
+        </legend>
+        <p><input type="File" value="File" /></p>
+        <p><input type="submit" value="Wyslij" /></p>
+    </fieldset>
+</form>

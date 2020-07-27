@@ -1,0 +1,263 @@
+﻿@model Test_2.Models.ProfileUser
+
+@using Renci.SshNet;
+@using Renci.SshNet.Sftp;
+@using System;
+@using Test_2.Models;
+
+@{    ViewBag.Title = "Index";}
+
+@RenderPage("~/Views/Komunikat.cshtml")
+
+@{    string ping = "";}
+
+@using (Html.BeginForm("ProfileChange", "UserMainProfile", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+        <table class="TableMainChangeProfile" style="margin-left:auto;margin-right:auto;">
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DropDownList("ProfileName", null, "Wybierz profil", new { @class = "BootomMainProfile" })
+                        @Html.ActionLink("Edycja Profili", "IndexAccount", "ProfileUsers", null, new { @class = "link" })
+                    </td>
+                    <td >
+                            <input type="submit" class="BootomMainProfile" value="Potwierdz profil" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+}
+
+
+
+    <table class="TableMainChangeProfile" style="margin-left:auto;margin-right:auto;">
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <div class="links">
+                        <div class="active">
+                            @if (ViewBag.Connect != 2)
+                            {
+                                <form action="/UserMainProfile/Connect" method="post">
+                                    <fieldset>
+                                        <p><input type="submit" class="BootomMainProfile" value="Testuj połączenie" /></p>
+                                    </fieldset>
+                                </form>
+                            }
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td class="MainName">Adress docelowy IP</td>
+                <td class="MainNameReturn">@ViewBag.ip</td>
+            </tr>
+            <tr>
+                <td class="MainName">Port połączenia</td>
+                <td class="MainNameReturn">@ViewBag.port</td>
+            </tr>
+            <tr>
+                <td class="MainName">Login uzytkownika logowania</td>
+                <td class="MainNameReturn">@ViewBag.loginUser</td>
+            </tr>
+
+            <tr>
+                <td class="MainName">Hasło użytkownika logowania </td>
+                <td class="MainNameReturn">
+                    <div style="margin-left:auto; margin-right:auto;">
+                        @for (int i = 0; i < (@ViewBag.loginKey).Length; i++)
+                        {<b>&#8226</b>}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="MainName">Hasło SuperUsera</td>
+                <td class="MainNameReturn">
+                    <div style="margin-left:auto; margin-right:auto;">
+                        @for (int i = 0; i < (@ViewBag.rootKey).Length; i++)
+                        {<b>&#8226</b>}
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+@{
+    string IPUser = System.Web.HttpContext.Current.Request.UserHostAddress;
+    Session["IPUser"] = IPUser;
+}
+
+@if ((bool)Session["TestConnect"])
+{
+    <div class="ProfileMainDiv">
+        <table class="TableMain">
+            <thead>
+                <tr>
+                    <th class="testing_">Pełna konfiguracja </th>
+                    <th class="testing_">Czas dostepu do hosta (z  " @ViewBag.ip " do " @Session["IPUser"] " )</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="testing">
+                        @{
+                            List<int> startKard = new List<int>();
+                            SshClient nowy;
+                            List<ModelKartSieciowych> ModelKartSieciowych_ = new List<ModelKartSieciowych>();
+                            List<cardIP> CommandIP = new List<cardIP>();
+                            string temp;
+                            string t;
+                            int licznik = 0;
+                            if ((string)Session["ViewBag_ip"] != null && (string)Session["ViewBag_loginUser"] != null && (string)Session["ViewBag_loginKey"] != null)
+                            {
+                                if (Session["ViewBag_ip"] == null)
+                                {
+                                    Session["viewbag_error"] = "W profilu użytkownika nie podano adresu, proszę sprawdzić profil";
+                                }
+                                else
+                                {
+                                    nowy = new SshClient((string)Session["ViewBag_ip"], (string)Session["ViewBag_loginUser"], (string)Session["ViewBag_loginKey"]);
+
+                                    try
+                                    {
+                                        nowy.Connect();
+
+                                        if (!nowy.IsConnected)
+                                        {
+                                            Session["viewbag_error"] = "Nawiazanie połączenia nie powiodło się!";
+                                            Session["viewbag_error_pomoc"] = "Aby rozwiązać problem proszę sprawdzić czy host jest dostępny oraz czy dane logowania są poprawne.";
+                                            <div>:01 - Błąd  nie można ustanowić połączenia</div>
+                                        }
+                                        else
+                                        {
+                                            try
+                                            {
+                                                temp = nowy.RunCommand("ip a").Execute();
+                                                ping = nowy.RunCommand("ping -c 5 " + (string)Session["IPUser"]).Execute();
+                                                string news = temp.ToString();
+                                                
+                                                for (int i = 0; i < news.Length; i++)
+                                                {
+                                                    if (i + 10 < news.Length)
+                                                    {
+                                                        t = news[i].ToString() + news[i + 1].ToString() + news[i + 2].ToString();
+                                                        bool p = true;
+
+                                                        if (licznik == 0)
+                                                        {
+                                                            for (int j = 0; j < 255; j++)
+                                                            {
+                                                                if ((j + ": ") == t && p)
+                                                                {
+                                                                    startKard.Add(i);
+                                                                    p = false;
+                                                                    licznik = 10;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+
+                                                    if (licznik != 0)
+                                                    {
+                                                        licznik--;
+                                                    }
+                                                }
+
+                                                int liczba = 1;
+                                                List<string> ListaKard = new List<string>();
+                                                List<int> StartKartySieciowej = new List<int>();
+                                                for (int i = 0; i < news.Length - 3; ++i)
+                                                {
+                                                    if (news[i].ToString() + news[i + 1].ToString() + news[i + 2].ToString() == liczba + ": " && news[i + 3].ToString() != "<")
+                                                    {
+                                                        StartKartySieciowej.Add(i);
+                                                        liczba++;
+                                                    }
+                                                }
+
+                                                int zm = 0;
+                                                for (int h = 0; h < StartKartySieciowej.Count; h++)
+                                                {
+                                                    if (StartKartySieciowej.Count <= h + 1)
+                                                    {
+                                                        ListaKard.Add(news.Substring(zm, (news.Length - 2) - zm));
+                                                    }
+                                                    else
+                                                    {
+                                                        ListaKard.Add(news.Substring(zm, (StartKartySieciowej[h + 1] - 1) - zm));
+                                                        zm = StartKartySieciowej[h + 1];
+                                                    }
+                                                }
+
+
+                                                <table style="margin:1%;">
+                                                    @for (int h = 0; h < ListaKard.Count; h++)
+                                                    {
+                                                        <tr>
+                                                            <td><div>@ListaKard[h]</div></td>
+                                                        </tr>
+                                                    }
+                                                </table>
+                                            }
+                                            catch
+                                            {
+                                                <div class="center-block">:03:  Błąd przetwarzania plikow! </div>
+                                            }
+                                        }
+                                    }
+                                    catch
+                                    {
+                                        <div class="center-block">Błąd :02 Błąd inspekcji poleceń</div>
+                                    }
+                                    Session["TestConnect"] = null;
+                                }
+                            }
+
+                        }
+                    </td>
+                    <td class="testing">
+                        @{
+                            List<string> pings = new List<string>();
+                            List<int> iloscP = new List<int>();
+                            for (int i = 0; i < ping.Length - 8; i++)
+                            {
+                                if ("64 bytes" == (ping[i].ToString() + ping[i + 1].ToString() + ping[i + 2].ToString() + ping[i + 3].ToString() + ping[i + 4].ToString() + ping[i + 5].ToString() + ping[i + 6].ToString() + ping[i + 7].ToString()))
+                                {
+                                    iloscP.Add(i);
+                                }
+                            }
+
+                            string abc = "";
+                            int starting = 0;
+                            for (int i = 0; i < iloscP.Count; i++)
+                            {
+                                for (int j = 0; j < ping.Length; j++)
+                                {
+                                    if (j < iloscP[i] && j >= starting)
+                                    {
+                                        abc = abc + ping[j];
+                                    }
+                                }
+                                starting = iloscP[i];
+                                pings.Add(abc);
+                                abc = "";
+                            }
+                        }
+
+
+                        <table style="text-align:center; margin:5%; ">
+                            @for (int i = 0; i < iloscP.Count; i++)
+                            {
+                                <tr>
+                                    <td> <div>@pings[i]</div></td>
+                                </tr>
+                            }
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}

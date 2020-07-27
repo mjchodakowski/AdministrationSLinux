@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Test_2.Models.ProfileUser>
+@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="rotate_on">
+    <img class="image_rotate" src="~/css/rotating-phone.png" name="rotate" />
+
+</div>
+<br />
+<div class="rotate_off">
+    <div class="textyDiv">
+        <texty>EDYTOR PROFILI</texty>
+    </div>
+    @RenderPage("~/Views/Komunikat.cshtml")
+
+    <div style="text-align: center">
+        <table class="TableMain" style="margin:auto;">
+            <thead>
+                <tr>
+                    <th style="text-align:center">NAZWA PROFILU</th>
+                    <th style="text-align:center">ADRES</th>
+                    <th style="text-align:center" class="mobile_off">PORT</th>
+                    <th style="text-align:center" class="mobile_off">NAZWA UŻYTKOWNIKA</th>
+                    <th style="text-align:center" class="mobile_off">HASŁO UŻYTKOWNIKA</th>
+                    <th style="text-align:center" class="mobile_off">HASŁO 'ROOT'</th>
+                    <th style="text-align:center" colspan="2"></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.ProfileName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ProfileIp)</td>
+                        <td class="mobile_off">@Html.DisplayFor(modelItem => item.ProfilePort)</td>
+                        <td class="mobile_off">@Html.DisplayFor(modelItem => item.ProfileNameUser)</td>
+                        <td class="mobile_off">@Html.Raw("\u2022\u2022\u2022\u2022\u2022")</td>
+                        <td class="mobile_off">@Html.Raw("\u2022\u2022\u2022\u2022\u2022")</td>
+                        <td>@Html.ActionLink("EDYCJA", "EditIndex", new { id = item.ProfileUserId }, new { @class = "w3-button w3-black" })</td>
+                        <td>@Html.ActionLink("USUŃ", "DeleteIndex", new { id = item.ProfileUserId }, new { @class = "w3-button w3-black" })</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+        <div style="text-align:right; margin-right:31px; margin-top:10px;">
+            @Html.ActionLink("TWORZENIE NOWEGO PROFILU", "CreateIndex", null, new { @class = "w3-button w3-grey" })
+        </div>
+
+    </div>
+    </div>

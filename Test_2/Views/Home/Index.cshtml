@@ -1,0 +1,101 @@
+﻿@using Test_2.Models
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Stona Główna";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+@RenderPage("~/Views/Komunikat.cshtml")
+
+<div class="full">
+    <div>
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <div class="przestrzen "></div>
+            <div class="wrap">
+                <div class="but" data-toggle="modal" data-target="#exampleModalCenter">LOGOWANIE DO SYSTEMU</div>
+            </div>
+            <div class="MainPicxNoLogon"> <img src="~/css/tux.png" alt="Avatar" class="avatar"></div>
+
+        }
+        <div class="Maindemomaintitle">
+            <div class="TextMain"><div>System zarządzania systemem linux</div></div>
+        </div>
+        <div id="pp"></div>
+        <table class="TableMain">
+            <thead>
+                <tr>
+                    <th>Podstawowe funkcjonalnosci Systemu</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr><td style="text-align:center;">Podstawowe funkcje</td></tr>
+                <tr><td>&#8226 Mozliwość utworzenia wielu profilów połączeniowych</td></tr>
+                <tr><td>&#8226 Explorator plików na systemie Linux</td></tr>
+                <tr><td>&#8226 Edytor użytkowników systemu Linux</td></tr>
+                <tr><td>&#8226 Zdalna konsola systemu Linux </td></tr>
+                <tr><td>&#8226 Server plików użytkownika </td></tr>
+
+                @if (User.IsInRole("root") || User.IsInRole("admin"))
+                {
+                    <tr><td>&#8594 Funkcje Administracyjne</td></tr>
+                    <tr><td>&#8226 Tworzenie uprawnień użytkowników</td></tr>
+                    <tr><td>&#8226 Usuwanie plików użytkowników</td></tr>
+                    <tr><td>&#8226 Usuwanie profilów użytkowników</td></tr>
+                    <tr><td>&#8226 Zarządzanie uzytkownikami</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <texty class="modal-title exampleModalLongTitle_" id="exampleModalLongTitle" >Logowanie do systemu</texty>
+                        <button type="button" class="closeLogon" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="imgcontainer">
+                            <img src="~/css/img_avatar2.png" alt="Avatar" class="avatarLogon">
+                        </div>
+                        <div class="writetextDivLogon"> @Html.TextBoxFor(m => m.Email, new { @class = "writetextLogon" })</div>
+                        <div class="inputValuedivLogon">Adres e-mail</div>
+
+                        <div class="writetextDivLogon">@Html.PasswordFor(m => m.Password, new { @class = "writetextLogon" })</div>
+                        <div class="inputValuedivLogon">Hasło</div>
+
+                        <div class="infoRememberMe">
+                            @Html.LabelFor(m => m.RememberMe, new { @class = "infoLogonInfo" })
+                            @Html.CheckBoxFor(m => m.RememberMe, new { @class = "infoLogonCheck" })
+                        </div>
+
+
+                        <div class="RegisterMeM">@Html.ActionLink("Zarejestruj się jako nowy użytkownik", "Register", new { Area = "Tools", Controller = "Account" }, new { @class = "RegisterMe" })</div>
+                        <div class="RegisterMeM">@Html.ActionLink("Nie pamiętasz hasła?", "ForgotPassword", new { Area = "Tools", Controller = "Account" }, new { @class = "RememberMeCheck" })</div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="bottomLogon">Zaloguj sie</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

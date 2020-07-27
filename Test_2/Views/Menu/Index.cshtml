@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = ViewBag.l;
+}
+
+<h2>Index</h2>
+@RenderPage("~/Views/Komunikat.cshtml");
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <form action="/Menu/ConfigAccount" method="post">
+            <fieldset>
+                <p><input type="submit" value="Configuracja Uzytkownikow" /></p>
+            </fieldset>
+        </form>
+        <form action="/Menu/MenadzerPlikow" method="post">
+            <fieldset>
+                <p><input type="submit" value="Menadzer plikow " /></p>
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+</html>

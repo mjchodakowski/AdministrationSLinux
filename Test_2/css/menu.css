@@ -1,0 +1,106 @@
+﻿body {
+    font-family: "Lato", sans-serif;
+    max-height:100%;
+}
+
+.loginPartial {
+
+    margin-right:5px;
+    position: absolute;
+    right: 20px;
+    font-size: 16px;
+}
+
+.loginPartial li a:hover {
+        color: #25acbf;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 50px;
+}
+
+    .sidenav a {
+        padding: 3px 3px 3px 25px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .sidenav a:hover {
+            color:red;
+        }
+
+
+
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        font-size: 30px;
+        margin-left: 40px;
+    }
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 300px) {
+    .sidenav {
+        padding-top: 5px;
+    }
+
+        .sidenav a {
+            font-size: 12px;
+        }
+}
+
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: green;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+    .alert.success {
+        background-color: #4CAF50;
+    }
+
+    .alert.info {
+        background-color: #2196F3;
+    }
+
+    .alert.warning {
+        background-color: #ff9800;
+    }
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .closebtn:hover {
+        color: black;
+    }

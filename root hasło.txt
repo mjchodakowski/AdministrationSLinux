@@ -1,0 +1,3 @@
+Aby zalogowaæ siê do aplikacji z pe³nymi prawami stworzone zosta³o statyczne konto root.
+Login:root@root.com
+Has³o:Root123!

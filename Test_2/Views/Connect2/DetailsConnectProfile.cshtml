@@ -1,0 +1,58 @@
+﻿@model Test_2.Models.ProfilPolaczenia
+
+@{
+    ViewBag.Title = "DetailsConnectProfile";
+}
+
+<h2>DetailsConnectProfile</h2>
+
+<div>
+    <h4>ProfilPolaczenia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Port)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Port)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NazwaUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazwaUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RootKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RootKey)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

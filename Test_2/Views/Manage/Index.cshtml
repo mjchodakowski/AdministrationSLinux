@@ -1,0 +1,65 @@
+﻿@model Test_2.Models.IndexViewModel
+@{
+    ViewBag.Title = "Zarządzaj";
+}
+
+<div class="textyDiv">
+    <texty>Ustawienia użytkownika</texty>
+</div>
+@{
+    if (Session["viewbag_error"] != null) { ViewBag.error = Session["viewbag_error"]; ViewBag.error_pomoc = Session["viewbag_error_pomoc"]; }
+    if (Session["viewbag_success"] != null) { ViewBag.success = Session["viewbag_success"]; ViewBag.success_pomoc = Session["viewbag_success_pomoc"]; }
+    if (Session["viewbag_info"] != null) { ViewBag.info = Session["viewbag_info"]; ViewBag.info_pomoc = Session["viewbag_info_pomoc"]; }
+
+}
+
+<table class="TableMain">
+    <thead >
+        <tr>
+            <th style="text-align:center;">Nazwa operacji</th>
+            <th style="text-align:center;">Wykonaj operacje</th>
+        </tr>
+    </thead>
+
+    <tbody style="text-align:center">
+        <tr>
+            <th style="text-align:center;">
+                Zmiana hasła użytkownika
+            </th>
+            <th style="text-align:center;">
+                [
+                @if (Model.HasPassword)
+                {
+                    @Html.ActionLink("Zmień hasło", "ChangePassword")
+                }
+                else
+                {
+                    @Html.ActionLink("Utwórz", "SetPassword")
+                }
+                ]
+            </th>
+        </tr>
+
+
+        <tr>
+            <th style="text-align:center;">
+                Zmiana nazwy logowania e-mail
+            </th>
+            <th style="text-align:center;">
+                [
+                @Html.ActionLink("Zmień nazwe użytkownika", "ChangeNameUsers")
+                ]
+            </th>
+        </tr>
+        <tr>
+            <th style="text-align:center;">
+                Etap uwierzytelnienia dwuetapowego
+            </th>
+            <th style="text-align:center;">
+                Niedostępne
+            </th>
+        </tr>
+
+
+    </tbody>
+</table>

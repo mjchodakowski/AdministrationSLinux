@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Connecting";
+}
+
+<h2>Ustanowiono Połączenie</h2>
+
+@ViewBag.ViewIP
+@ViewBag.ViewLogin
+@ViewBag.ViewKey
+
+@ViewBag.news
+
+<form action="/Connect/Disconnect" method="post">
+    <fieldset>
+        <p><input type="submit" value="Rozlacz" /></p>
+    </fieldset>
+</form>
+
+<form action="/Connect/AddUser" method="get">
+    <fieldset>
+        <p><input type="submit" value="Create" /></p>
+    </fieldset>
+</form>
+
+
